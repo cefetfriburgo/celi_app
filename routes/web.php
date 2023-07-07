@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\AlunoController;
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -67,8 +69,4 @@ use App\Http\Controllers\AlunoController;
 Route::get('/', [IndexController::class, 'home']);
 
 Route::get('/alunos/{aluno_id}', [AlunoController::class, 'getById']);
-/*
-Route::post();
-Route::put();
-Route::delete();
-*/
+Route::get('/alunos/{aluno_id}/cursos', [AlunoController::class, 'listCursos']);

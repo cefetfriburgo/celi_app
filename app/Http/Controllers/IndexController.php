@@ -19,6 +19,7 @@ class IndexController extends Controller
                 'locais' => Local::all()];
                 
         */
-        return view('index')->with('cursos', Curso::all());
+        return view('index')->with('cursos', []);
+        //return view('index')->with('cursos', Curso::all());
     }
 }
