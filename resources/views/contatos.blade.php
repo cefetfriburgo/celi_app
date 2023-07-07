@@ -1,0 +1,100 @@
+@extends('layouts.main')
+
+@section('titulo')
+Aluno
+@endsection
+
+@section('principal')
+
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- <script src="https://unpkg.com/@popperjs/core@2" defer></script> -->
+    <!-- <script src="js/bootstrap.bundle.js" defer></script> -->
+    <script src="assets/js/bootstrap.min.js" defer></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Contatos</title>
+</head>
+
+<body>
+
+    <main class="container mt-5 mb-5">
+        <div class="container bg-body-tertiary rounded p-4">
+            <div>
+                <h1 class="text-center mb-4 pb-2 border-bottom">Contatos</h1>
+                <p class="mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda error provident nemo dicta cupiditate veritatis vitae, odio, temporibus cum perferendis omnis, iste inventore expedita officiis ab obcaecati similique asperiores. Ex!</p>
+                
+                <h5 class="text-center mb-4 pb-2 border-bottom">Redes Sociais</h5>
+                <div class="d-flex justify-content-around mb-4">
+                    <a href="#" class=" text-decoration-none text-white"><i class="bi bi-instagram"></i> Instagram</a>
+                    <a href="#" class=" text-decoration-none text-white"><i class="bi bi-facebook"></i> Facebook</a>
+                </div>
+
+                <h5 class="text-center mb-4 pb-2 border-bottom">Outros Contatos</h5>
+                <div style="max-width: 100;;overflow: scroll;">
+                    <table class="table table-striped table-dark">
+                        <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">E-mail</th>
+                            <th scope="col">Telefone</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Organização</td>
+                                <td>CELI</td>
+                                <td>celi@email.com</td>
+                                <td>(22) 2523-9988</td>
+                            </tr>
+                            <tr>
+                                <td>Coordenadora</td>
+                                <td>Ana Maria</td>
+                                <td>email@email.com</td>
+                                <td>(22) 9998877-6655</td>
+                            </tr>
+                            <tr>
+                                <td>Coordenadora</td>
+                                <td>Maria Clara</td>
+                                <td>email@email.com</td>
+                                <td>(22) 99977-5544</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </main>
+<footer>
+
+</footer>
+
+<!-- Parte relacionada ao menu -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header"> <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="dropdown mt-3">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+                <li class="nav-item"><a href="cursos.html" class="nav-link">Cursos</a></li>
+                <li class="nav-item"><a href="como-participar.html" class="nav-link">Como participar</a></li>
+                <li class="nav-item"><a href="contatos.html" class="nav-link">Contatos</a></li>
+                <li class="nav-item"><a href="sobre-nos.html" class="nav-link">Sobre nós</a></li>
+            </ul>
+        </div>
+    </div>
+</div>                                                                  
+</body>
+
+</html>
+
+@endsection

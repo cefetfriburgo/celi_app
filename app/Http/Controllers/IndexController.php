@@ -21,4 +21,8 @@ class IndexController extends Controller
         */
         return view('index')->with('cursos', Curso::all());
     }
+
+    public function contatos(){
+        return view('contatos');
+    }
 }

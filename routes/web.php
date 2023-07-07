@@ -66,6 +66,8 @@ use App\Http\Controllers\AlunoController;
 
 Route::get('/', [IndexController::class, 'home']);
 
+Route::get('/contatos', [IndexController::class,'contatos']);
+
 Route::get('/alunos/{aluno_id}', [AlunoController::class, 'getById']);
 /*
 Route::post();
