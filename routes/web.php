@@ -18,10 +18,11 @@ use App\Http\Controllers\CursoController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-//INDEX
+//INDEX & VARIADAS
 Route::get('/', [IndexController::class, 'home'])->name('home');
 Route::get('/contatos', [IndexController::class,'contatos']);
 Route::get('/comoParticipar', [IndexController::class,'comoParticipar'])->name('comoParticipar');
+Route::get('/sobreNos', [IndexController::class,'sobreNos'])->name('sobreNos');
 //ALUNOS
 Route::get('/alunos', [AlunoController::class, 'all'])->name('alunos');
 Route::get('/alunos/{aluno_id}', [AlunoController::class, 'alunosId'])->name('alunosId');

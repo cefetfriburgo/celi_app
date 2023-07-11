@@ -30,4 +30,9 @@ class IndexController extends Controller
     public function comoParticipar(){
         return view('comoParticipar');
     }
+
+    public function sobreNos(){
+        return view('sobreNos');
+    }
+
 }
