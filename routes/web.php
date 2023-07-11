@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\AlunoController;
+use App\Http\Controllers\CursoController;
 
 
 
@@ -24,6 +25,8 @@ Route::get('/contatos', [IndexController::class,'contatos']);
 Route::get('/alunos', [AlunoController::class, 'all'])->name('alunos');
 Route::get('/alunos/{aluno_id}', [AlunoController::class, 'alunosId'])->name('alunosId');
 Route::get('/alunos/{aluno_id}/cursos', [AlunoController::class, 'listCursos'])->name('alunosCurso');
+//CURSOS
+Route::get('/cursos', [CursoController::class, 'cursos'])->name('cursos');
 
 /*
 Route::post();

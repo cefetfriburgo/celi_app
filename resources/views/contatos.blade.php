@@ -85,10 +85,10 @@ Aluno
         <div class="dropdown mt-3">
             <ul class="navbar-nav">
                 <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
-                <li class="nav-item"><a href="cursos.html" class="nav-link">Cursos</a></li>
-                <li class="nav-item"><a href="como-participar.html" class="nav-link">Como participar</a></li>
-                <li class="nav-item"><a href="contatos.html" class="nav-link">Contatos</a></li>
-                <li class="nav-item"><a href="sobre-nos.html" class="nav-link">Sobre nós</a></li>
+                <li class="nav-item"><a href="cursos" class="nav-link">Cursos</a></li>
+                <li class="nav-item"><a href="como-participar" class="nav-link">Como participar</a></li>
+                <li class="nav-item"><a href="contatos" class="nav-link">Contatos</a></li>
+                <li class="nav-item"><a href="sobre-nos" class="nav-link">Sobre nós</a></li>
             </ul>
         </div>
     </div>
