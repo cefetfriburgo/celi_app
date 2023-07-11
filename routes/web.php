@@ -26,9 +26,11 @@ Route::get('/sobreNos', [IndexController::class,'sobreNos'])->name('sobreNos');
 //ALUNOS
 Route::get('/alunos', [AlunoController::class, 'all'])->name('alunos');
 Route::get('/aluno/{aluno_id}', [AlunoController::class, 'alunosId'])->name('alunosId');
-Route::get('/aluno/{aluno_id}/cursos', [AlunoController::class, 'listCursos'])->name('alunosCurso');
+Route::get('/aluno/{aluno_id}/alunoPerfil', [AlunoController::class, 'alunoPerfil'])->name('alunoPerfil');
+Route::get('/aluno/{aluno_id}/meusCursos', [AlunoController::class, 'meusCursos'])->name('alunosCurso');
 //CURSOS
 Route::get('/cursos', [CursoController::class, 'cursos'])->name('cursos');
+
 //LOGIN & Cadastro
 Route::get('/login', [LoginController::class,'login'])->name('login');
 Route::get('/cadastro', [CadastroController::class,'cadastro'])->name('cadastro');

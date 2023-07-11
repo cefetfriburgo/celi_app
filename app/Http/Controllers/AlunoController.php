@@ -17,8 +17,12 @@ class AlunoController extends Controller
         return view('aluno')->with('aluno', Aluno::find($aluno_id));
     }
 
-    public function listCursos($aluno_id) {
+    public function meusCursos($aluno_id) {
 
-        return view('alunocurso');
+        return view('meusCursos');
+    }
+
+    public function alunoPerfil(){
+        return view('alunoPerfil');
     }
 }
