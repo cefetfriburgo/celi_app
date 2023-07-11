@@ -76,11 +76,3 @@ Route::delete();
  *              public function delete(id){ ... }
  *
  */
-
-
-Route::get('/', [IndexController::class, 'home']);
-
-Route::get('/contatos', [IndexController::class,'contatos']);
-
-Route::get('/alunos/{aluno_id}', [AlunoController::class, 'getById']);
-Route::get('/alunos/{aluno_id}/cursos', [AlunoController::class, 'listCursos']);
