@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\AlunoController;
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,10 +17,13 @@ use App\Http\Controllers\AlunoController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+//INDEX
 Route::get('/', [IndexController::class, 'home'])->name('home');
+Route::get('/contatos', [IndexController::class,'contatos']);
+//ALUNOS
 Route::get('/alunos', [AlunoController::class, 'all'])->name('alunos');
-Route::get('/alunos/{aluno_id}', [AlunoController::class, 'alunosId']);
+Route::get('/alunos/{aluno_id}', [AlunoController::class, 'alunosId'])->name('alunosId');
+Route::get('/alunos/{aluno_id}/cursos', [AlunoController::class, 'listCursos'])->name('alunosCurso');
 
 /*
 Route::post();

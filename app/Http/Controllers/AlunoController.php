@@ -16,4 +16,9 @@ class AlunoController extends Controller
     public function getById($aluno_id) {
         return view('aluno')->with('aluno', Aluno::find($aluno_id));
     }
+
+    public function listCursos($aluno_id) {
+
+        return view('alunocurso');
+    }
 }
