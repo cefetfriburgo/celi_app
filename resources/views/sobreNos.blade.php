@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('titulo')
-Cursos
+Sobre Nos
 @endsection
 
 @section('principal')

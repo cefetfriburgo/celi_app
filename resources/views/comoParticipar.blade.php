@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('titulo')
-Aluno
+Como Participar
 @endsection
 
 @section('principal')
