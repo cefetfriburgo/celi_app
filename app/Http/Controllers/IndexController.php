@@ -26,4 +26,8 @@ class IndexController extends Controller
     public function contatos(){
         return view('contatos');
     }
+
+    public function comoParticipar(){
+        return view('comoParticipar');
+    }
 }

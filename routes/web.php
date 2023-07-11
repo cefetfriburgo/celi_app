@@ -21,6 +21,7 @@ use App\Http\Controllers\CursoController;
 //INDEX
 Route::get('/', [IndexController::class, 'home'])->name('home');
 Route::get('/contatos', [IndexController::class,'contatos']);
+Route::get('/comoParticipar', [IndexController::class,'comoParticipar'])->name('comoParticipar');
 //ALUNOS
 Route::get('/alunos', [AlunoController::class, 'all'])->name('alunos');
 Route::get('/alunos/{aluno_id}', [AlunoController::class, 'alunosId'])->name('alunosId');

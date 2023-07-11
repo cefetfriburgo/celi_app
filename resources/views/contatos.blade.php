@@ -5,24 +5,6 @@ Aluno
 @endsection
 
 @section('principal')
-
-<!DOCTYPE html>
-<html lang="pt-br" data-bs-theme="dark">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- <script src="https://unpkg.com/@popperjs/core@2" defer></script> -->
-    <!-- <script src="js/bootstrap.bundle.js" defer></script> -->
-    <script src="assets/js/bootstrap.min.js" defer></script>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Contatos</title>
-</head>
-
-<body>
-
     <main class="container mt-5 mb-5">
         <div class="container bg-body-tertiary rounded p-4">
             <div>
@@ -72,29 +54,4 @@ Aluno
 
         </div>
     </main>
-<footer>
-
-</footer>
-
-<!-- Parte relacionada ao menu -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-    <div class="offcanvas-header"> <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-            aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-        <div class="dropdown mt-3">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
-                <li class="nav-item"><a href="cursos" class="nav-link">Cursos</a></li>
-                <li class="nav-item"><a href="como-participar" class="nav-link">Como participar</a></li>
-                <li class="nav-item"><a href="contatos" class="nav-link">Contatos</a></li>
-                <li class="nav-item"><a href="sobre-nos" class="nav-link">Sobre nós</a></li>
-            </ul>
-        </div>
-    </div>
-</div>                                                                  
-</body>
-
-</html>
-
 @endsection
