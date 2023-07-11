@@ -16,6 +16,15 @@ use App\Http\Controllers\AlunoController;
 |
 */
 
+Route::get('/', [IndexController::class, 'home'])->name('home');
+Route::get('/alunos', [AlunoController::class, 'all'])->name('alunos');
+Route::get('/alunos/{aluno_id}', [AlunoController::class, 'alunosId']);
+
+/*
+Route::post();
+Route::put();
+Route::delete();
+*/
 
 /**
  * Regra para formação de rota:
@@ -62,13 +71,3 @@ use App\Http\Controllers\AlunoController;
  *              public function delete(id){ ... }
  *
  */
-
-
-Route::get('/', [IndexController::class, 'home']);
-
-Route::get('/alunos/{aluno_id}', [AlunoController::class, 'getById']);
-/*
-Route::post();
-Route::put();
-Route::delete();
-*/
