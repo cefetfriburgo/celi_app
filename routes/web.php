@@ -4,8 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\AlunoController;
-
-
+use App\Http\Controllers\CursoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,6 +66,7 @@ use App\Http\Controllers\AlunoController;
 
 
 Route::get('/', [IndexController::class, 'home']);
+Route::get('/cursos', [CursoController::class, 'cursos']);
 
 Route::get('/contatos', [IndexController::class,'contatos']);
 
