@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\AlunoController;
+use App\Http\Controllers\CadastroController;
 use App\Http\Controllers\CursoController;
 use App\Http\Controllers\LoginController;
 
@@ -30,6 +31,7 @@ Route::get('/alunos/{aluno_id}/cursos', [AlunoController::class, 'listCursos'])-
 Route::get('/cursos', [CursoController::class, 'cursos'])->name('cursos');
 //LOGIN & Cadastro
 Route::get('/login', [LoginController::class,'login'])->name('login');
+Route::get('/cadastro', [CadastroController::class,'cadastro'])->name('cadastro');
 
 /*
 Route::post();
