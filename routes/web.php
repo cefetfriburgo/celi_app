@@ -25,8 +25,8 @@ Route::get('/comoParticipar', [IndexController::class,'comoParticipar'])->name('
 Route::get('/sobreNos', [IndexController::class,'sobreNos'])->name('sobreNos');
 //ALUNOS
 Route::get('/alunos', [AlunoController::class, 'all'])->name('alunos');
-Route::get('/alunos/{aluno_id}', [AlunoController::class, 'alunosId'])->name('alunosId');
-Route::get('/alunos/{aluno_id}/cursos', [AlunoController::class, 'listCursos'])->name('alunosCurso');
+Route::get('/aluno/{aluno_id}', [AlunoController::class, 'alunosId'])->name('alunosId');
+Route::get('/aluno/{aluno_id}/cursos', [AlunoController::class, 'listCursos'])->name('alunosCurso');
 //CURSOS
 Route::get('/cursos', [CursoController::class, 'cursos'])->name('cursos');
 //LOGIN & Cadastro

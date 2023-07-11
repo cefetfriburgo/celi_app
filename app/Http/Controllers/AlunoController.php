@@ -10,10 +10,10 @@ class AlunoController extends Controller
 {
     public function all()
     {
-        return view('alunos')->with('alunos', Aluno::all());
+        return view('aluno')->with('alunos', Aluno::all());
     }
 
-    public function getById($aluno_id) {
+    public function alunosId($aluno_id) {
         return view('aluno')->with('aluno', Aluno::find($aluno_id));
     }
 
