@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\AlunoController;
-use App\Http\Controllers\CursoController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,19 @@ use App\Http\Controllers\CursoController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+//INDEX
+Route::get('/', [IndexController::class, 'home'])->name('home');
+Route::get('/contatos', [IndexController::class,'contatos']);
+//ALUNOS
+Route::get('/alunos', [AlunoController::class, 'all'])->name('alunos');
+Route::get('/alunos/{aluno_id}', [AlunoController::class, 'alunosId'])->name('alunosId');
+Route::get('/alunos/{aluno_id}/cursos', [AlunoController::class, 'listCursos'])->name('alunosCurso');
 
+/*
+Route::post();
+Route::put();
+Route::delete();
+*/
 
 /**
  * Regra para formação de rota:
@@ -66,7 +79,6 @@ use App\Http\Controllers\CursoController;
 
 
 Route::get('/', [IndexController::class, 'home']);
-Route::get('/cursos', [CursoController::class, 'cursos']);
 
 Route::get('/contatos', [IndexController::class,'contatos']);
 

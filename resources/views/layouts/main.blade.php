@@ -14,26 +14,19 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar bg-body-tertiary">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/img/logo-white-e1535748387518.png" alt="Logo"
-                        class="imageWidth d-inline-block align-text-top">
-                </a>
-                <a class="btn btn-dark" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
-                    aria-controls="offcanvasExample">
-                    <i class="bi bi-list fs-4"></i>
-                </a>
-            </div>
-        </nav>
-
-
-    </header>
-    <main>
+<header>
+    <nav class="navbar bg-body-tertiary">
         <div class="container">
-            @yield('principal')
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/logo-white-e1535748387518.png" alt="Logo"
+                     class="imageWidth d-inline-block align-text-top">
+            </a>
+            <a class="btn btn-dark" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+               aria-controls="offcanvasExample">
+                <i class="bi bi-list fs-4"></i>
+            </a>
         </div>
+    </nav>
 
         <!-- MENU LATERAL -->
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
@@ -54,8 +47,9 @@
                 </div>
             </div>
         </div>
-    </main>
-    <footer>
+    </div>
+</main>
+<footer>
 
 </body>
 
