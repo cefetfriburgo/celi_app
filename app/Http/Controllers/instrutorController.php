@@ -19,4 +19,8 @@ class InstrutorController extends Controller
     public function instrutorPerfil(){
         return view('instrutorPerfil');
     }
+
+    public function cadastrarCurso(){
+        return view('cadastrarCurso');
+    }
 }

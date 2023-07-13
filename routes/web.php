@@ -34,6 +34,7 @@ Route::get('/cursos', [CursoController::class, 'cursos'])->name('cursos');
 Route::get('/instrutor/{intrutor_id}', [InstrutorController::class, 'instrutorId'])->name('instrutorId');
 Route::get('/instrutor/{intrutor_id}/instrutorPerfil', [InstrutorController::class, 'instrutorPerfil'])->name('instrutorPerfil');
 Route::get('/instrutor/{intrutor_id}/cursosInstrutor', [InstrutorController::class, 'meusCursos'])->name('meusCursos');
+Route::get('/instrutor/{intrutor_id}/cadastrarCurso',[InstrutorController::class,'cadastrarCurso'])->name('cadastrarCurso');
 
 //LOGIN & Cadastro
 Route::get('/login', [LoginController::class,'login'])->name('login');
