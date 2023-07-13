@@ -6,8 +6,8 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\AlunoController;
 use App\Http\Controllers\CadastroController;
 use App\Http\Controllers\CursoController;
+use App\Http\Controllers\InstrutorController;
 use App\Http\Controllers\LoginController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,6 +30,10 @@ Route::get('/aluno/{aluno_id}/alunoPerfil', [AlunoController::class, 'alunoPerfi
 Route::get('/aluno/{aluno_id}/meusCursos', [AlunoController::class, 'meusCursos'])->name('alunosCurso');
 //CURSOS
 Route::get('/cursos', [CursoController::class, 'cursos'])->name('cursos');
+//INSTRUTOR
+Route::get('/instrutor/{intrutor_id}', [InstrutorController::class, 'instrutorId'])->name('instrutorId');
+Route::get('/instrutor/{intrutor_id}/instrutorPerfil', [InstrutorController::class, 'instrutorPerfil'])->name('instrutorPerfil');
+Route::get('/instrutor/{intrutor_id}/cursosInstrutor', [InstrutorController::class, 'meusCursos'])->name('meusCursos');
 
 //LOGIN & Cadastro
 Route::get('/login', [LoginController::class,'login'])->name('login');

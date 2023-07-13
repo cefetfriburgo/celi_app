@@ -29,15 +29,13 @@ Login
               </div>
 
               <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Esqueci minha senha</a></p>
-              <button class="btn btn-outline-light btn-lg px-5" type="submit"><a href="{{route('alunosId', ['aluno_id'=>1])}}">Entrar</a></button>
-            </div>
-
+              <button class="btn btn-outline-light btn-lg px-5 mb-3" type="submit"><a href="{{route('alunosId', ['aluno_id'=>1])}}">Entrar Como Aluno</a></button>
+              <button class="btn btn-outline-light btn-lg px-5" type="submit"><a href="{{route('alunosId', ['aluno_id'=>1])}}">Entrar Como Colaborador</a></button>
             </div>
             <div>
               <p class="mb-0">Primeira vez por aqui? <a href="cadastro" class="text-white-50 fw-bold">Cadastre-se</a>
               </p>
             </div>
-
           </div>
         </div>
       </div>

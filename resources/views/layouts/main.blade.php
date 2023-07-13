@@ -17,7 +17,7 @@
 <header>
     <nav class="navbar bg-body-tertiary">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="/">
                 <img src="assets/img/logo-white-e1535748387518.png" alt="Logo"
                      class="imageWidth d-inline-block align-text-top">
             </a>
