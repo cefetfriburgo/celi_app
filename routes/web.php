@@ -30,6 +30,7 @@ Route::get('/aluno/{aluno_id}/alunoPerfil', [AlunoController::class, 'alunoPerfi
 Route::get('/aluno/{aluno_id}/meusCursos', [AlunoController::class, 'meusCursos'])->name('alunosCurso');
 //CURSOS
 Route::get('/cursos', [CursoController::class, 'cursos'])->name('cursos');
+Route::get('/cursos/{curso_id}', [CursoController::class, 'get'])->name('cursoId');
 //INSTRUTOR
 Route::get('/instrutor/{intrutor_id}', [InstrutorController::class, 'instrutorId'])->name('instrutorId');
 Route::get('/instrutor/{intrutor_id}/instrutorPerfil', [InstrutorController::class, 'instrutorPerfil'])->name('instrutorPerfil');
