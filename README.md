@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="data:image/png;base64,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" width="400" alt="CeLI Logo"></a></p>
 
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
@@ -7,60 +7,32 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Sobre CELI APP
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+CELI App é um sistema web para auxiliar na gestão de cursos e secretaria do programa CELI. Desenvolvido pelo projeto de extensão Fábrica de Software, o CELI App foi construído com Laravel como uma atividade projetizada do curso de formação das equipes.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+// - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Equipe 
 
-## Learning Laravel
+O sistema está sendo desenvolvido e mantido por:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Professores Bruno Toledo Rafael Escalfoni
+- Henrique Motta
+- Isadora Passos
+- João Guilherme
+- Rian
+- Gabriel
+- Gabriel Theóphilo
+- Fabrício
+- Caio Luckas
+- João Victor
+- Aymée
+- Matheus
+- Sofia
+- Rayssa
+- Kayllane Cardoso
+- Maria Eduarda
+- Dhiovana
+- Paulo Victor
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
