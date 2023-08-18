@@ -20,6 +20,9 @@ use App\Http\Controllers\LoginController;
 |
 */
 //INDEX & VARIADAS
+Route::get('/dhiovana', function() {
+    return view('eventos');
+});
 Route::get('/', [IndexController::class, 'home'])->name('home');
 Route::get('/contatos', [IndexController::class,'contatos']);
 Route::get('/comoParticipar', [IndexController::class,'comoParticipar'])->name('comoParticipar');
