@@ -1,0 +1,20 @@
+.nav-item{
+    padding: 10px;
+}
+.nav-item :hover{
+    color: white;
+    text-decoration: underline;
+}
+.menu_img{
+    padding-left: 50px;
+    
+}
+.card_login{
+    margin-top: 15px;
+}
+.card_login > a{
+    text-decoration: none;
+}
+.card_login :hover{
+    text-decoration: underline;
+}

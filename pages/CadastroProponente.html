@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CadastroProfessor</title>
+    <script src="assets/js/bootstrap.min.js" defer></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="NavStyle.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header class="container">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/logo-white-e1535748387518.png" alt="Logo"
+                        class="imageWidth d-inline-block align-text-top">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cursos.html">Cursos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="como-participar.html">Como participar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contatos.html">Contatos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre-nos.html">Sobre nós</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+              <div class="col-md-6">
+                <h2 class="mb-4">Cadastro para Proponente</h2>
+                <form>
+                  <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="telefone" class="form-label">Telefone</label>
+                    <input type="tel" class="form-control" id="telefone" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="departamento" class="form-label">Vaga pretendida</label>
+                    <select class="form-select" id="departamento" required>
+                      <option value="" disabled selected>Selecione o curso como Proponente</option>
+                      <option value="depto1">Curso1</option>
+                      <option value="depto2">Curso2</option>
+                      <option value="depto3">Curso3</option>
+                      <option value="depto3">Outros</option>
+                      <!-- Adicione mais opções conforme necessário -->
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="senha" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="senha" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="confirmarSenha" class="form-label">Confirmar Senha</label>
+                    <input type="password" class="form-control" id="confirmarSenha" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Cadastrar Professor</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    </main>
+</body>
+
+</html>
