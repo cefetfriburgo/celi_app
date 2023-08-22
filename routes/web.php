@@ -42,6 +42,9 @@ Route::get('/eventos', [EventoController::class, 'eventos']);
 //LOGIN & Cadastro
 Route::get('/login', [LoginController::class,'login'])->name('login');
 Route::get('/cadastro', [CadastroController::class,'cadastro'])->name('cadastro');
+Route::get('/cadastro/aluno', [CadastroController::class,'aluno'])->name('aluno');
+Route::get('/cadastro/proponente', [CadastroController::class,'proponente'])->name('proponente');
+Route::get('/cadastro/administrador', [CadastroController::class,'administrador'])->name('administrador');
 
 /*
 Route::post();
