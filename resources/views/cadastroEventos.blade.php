@@ -6,7 +6,6 @@ Eventos
 
 @section('principal')
 <div class="row">
-<<<<<<< HEAD
 
   <form>
             <div class="form-group mb-2">
@@ -49,17 +48,5 @@ Eventos
                 </div>
             </div>
         </form>
-=======
-  @foreach($eventos as $evento)
-  <div class="card m-3">
-    <h5 class="card-header">{{$evento->tipo}}</h5>
-    <div class="card-body">
-      <h5 class="card-title">{{$evento->titulo}}</h5>
-      <p class="card-text">{{$evento->descricao}}</p>
-      <a href="/eventos/{{$evento->id}}" class="btn btn-primary">Veja mais</a>
-    </div>
-  </div>
-@endforeach
->>>>>>> d49da3282798057c34946acf8b45a14a40104363
 </div>
 @endsection
