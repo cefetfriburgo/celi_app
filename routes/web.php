@@ -19,6 +19,9 @@ use App\Http\Controllers\LoginController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/louback', function () {
+    return view('aluno');
+});
 //INDEX & VARIADAS
 Route::get('/', [IndexController::class, 'home'])->name('home');
 Route::get('/contatos', [IndexController::class,'contatos']);
