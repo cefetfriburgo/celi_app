@@ -43,7 +43,7 @@ Route::get('/instrutor/{intrutor_id}/cursosInstrutor', [InstrutorController::cla
 Route::get('/instrutor/{intrutor_id}/cadastrarCurso',[InstrutorController::class,'cadastrarCurso'])->name('cadastrarCurso');
 //Eventos
 Route::get('/eventos', [EventoController::class, 'eventos']);
-Route::get('/criarevento', [EventoController::class, 'cadastrarEventos']); // somente teste
+Route::get('/criarEvento', [EventoController::class, 'cadastrarEventos']); // somente teste
 //LOGIN & Cadastro
 Route::get('/login', [LoginController::class,'login'])->name('login');
 Route::get('/cadastro', [CadastroController::class,'cadastro'])->name('cadastro');
