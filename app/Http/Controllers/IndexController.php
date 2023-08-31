@@ -34,5 +34,8 @@ class IndexController extends Controller
     public function sobreNos(){
         return view('sobreNos');
     }
+    public function telaInicialProponente(){
+        return view('telaInicialProponente');
+    }
 
 }

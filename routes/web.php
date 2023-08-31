@@ -27,6 +27,7 @@ Route::get('/', [IndexController::class, 'home'])->name('home');
 Route::get('/contatos', [IndexController::class,'contatos']);
 Route::get('/comoParticipar', [IndexController::class,'comoParticipar'])->name('comoParticipar');
 Route::get('/sobreNos', [IndexController::class,'sobreNos'])->name('sobreNos');
+Route::get('/telaInicialProponente',[IndexController::class,'telaInicialProponente']);
 //ALUNOS
 Route::get('/alunos', [AlunoController::class, 'all'])->name('alunos');
 Route::get('/aluno/{aluno_id}', [AlunoController::class, 'alunosId'])->name('alunosId');
@@ -45,6 +46,9 @@ Route::get('/eventos', [EventoController::class, 'eventos']);
 //LOGIN & Cadastro
 Route::get('/login', [LoginController::class,'login'])->name('login');
 Route::get('/cadastro', [CadastroController::class,'cadastro'])->name('cadastro');
+Route::get('/cadastro/aluno', [CadastroController::class,'aluno'])->name('aluno');
+Route::get('/cadastro/proponente', [CadastroController::class,'proponente'])->name('proponente');
+Route::get('/cadastro/administrador', [CadastroController::class,'administrador'])->name('administrador');
 
 /*
 Route::post();
