@@ -11,16 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('alunos', function (Blueprint $table) {
+        Schema::create('cursos', function (Blueprint $table) {
             $table->id();
-            $table->string("nome", 128)->nullable(false);
-            $table->string("email", 255);
-            $table->string("telefone", 20);
-            $table->string("endereco", 255);
-            $table->string("cpf", 15)->nullable(false);
-            $table->string("matricula", 30);
             $table->timestamps();
-
+            $table->string("nome", 128)->nullable(false);
+            $table->string("descricao", 255);
+            $table->integer("carga_horaria");
             $table->engine = 'InnoDB';
         });
     }
@@ -30,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('alunos');
+        Schema::dropIfExists('cursos');
     }
 };
