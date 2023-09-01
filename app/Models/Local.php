@@ -9,7 +9,7 @@ class Local extends Model
 {
     use HasFactory;
 
-    protected $table = 'local';
+    protected $table = 'locals';
 
     protected $fillable = [
                 'nome',

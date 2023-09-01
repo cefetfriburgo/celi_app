@@ -9,6 +9,8 @@ use App\Http\Controllers\CursoController;
 use App\Http\Controllers\EventoController;
 use App\Http\Controllers\InstrutorController;
 use App\Http\Controllers\LoginController;
+use App\Models\Curso;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,6 +38,8 @@ Route::get('/aluno/{aluno_id}/meusCursos', [AlunoController::class, 'meusCursos'
 //CURSOS
 Route::get('/cursos', [CursoController::class, 'cursos'])->name('cursos');
 Route::get('/cursos/{curso_id}', [CursoController::class, 'get'])->name('cursoId');
+Route::get('/cadastrarCurso', [CursoController::class, 'create']);
+Route::post('criarCurso', [CursoController::class, 'store']);
 //INSTRUTOR
 Route::get('/instrutor/{intrutor_id}', [InstrutorController::class, 'instrutorId'])->name('instrutorId');
 Route::get('/instrutor/{intrutor_id}/instrutorPerfil', [InstrutorController::class, 'instrutorPerfil'])->name('instrutorPerfil');

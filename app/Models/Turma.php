@@ -12,7 +12,7 @@ class Turma extends Model
 {
     use HasFactory;
 
-    protected $table = 'turma';
+    protected $table = 'turmas';
 
     protected $fillable = [
                 'num_vaga',

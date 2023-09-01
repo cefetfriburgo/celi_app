@@ -16,7 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string("nome", 128)->nullable(false);
             $table->string("descricao", 255);
-            $table->integer("carga_horaria");
+            $table->unsignedDecimal("carga_horaria", 10, 2);
             $table->engine = 'InnoDB';
         });
     }
