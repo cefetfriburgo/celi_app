@@ -37,5 +37,7 @@ class IndexController extends Controller
     public function telaInicialProponente(){
         return view('telaInicialProponente');
     }
-
+    public function telaInicialAdmin(){
+        return view('telaInicialAdmin');
+    }
 }

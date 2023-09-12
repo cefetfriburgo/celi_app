@@ -25,4 +25,7 @@ class AlunoController extends Controller
     public function alunoPerfil(){
         return view('alunoPerfil');
     }
+    public function telaInicialAluno(){
+        return view('telaInicialAluno');
+    }
 }

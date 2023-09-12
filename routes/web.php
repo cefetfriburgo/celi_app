@@ -9,8 +9,6 @@ use App\Http\Controllers\CursoController;
 use App\Http\Controllers\EventoController;
 use App\Http\Controllers\InstrutorController;
 use App\Http\Controllers\LoginController;
-use App\Models\Curso;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,27 +19,22 @@ use App\Models\Curso;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/louback', function () {
-    return view('aluno');
-});
 //INDEX & VARIADAS
 Route::get('/', [IndexController::class, 'home'])->name('home');
 Route::get('/contatos', [IndexController::class,'contatos']);
 Route::get('/comoParticipar', [IndexController::class,'comoParticipar'])->name('comoParticipar');
 Route::get('/sobreNos', [IndexController::class,'sobreNos'])->name('sobreNos');
 Route::get('/telaInicialProponente',[IndexController::class,'telaInicialProponente']);
-Route::get('/telaInicialProponente',[IndexController::class,'telaInicialProponente']);
-Route::get('/telaInicialAdministrador',[IndexController::class,'telaInicialAdministrador']);
+Route::get('/telaInicialAdmin',[IndexController::class,'telaInicialAdmin']);
 //ALUNOS
 Route::get('/alunos', [AlunoController::class, 'all'])->name('alunos');
 Route::get('/aluno/{aluno_id}', [AlunoController::class, 'alunosId'])->name('alunosId');
 Route::get('/aluno/{aluno_id}/alunoPerfil', [AlunoController::class, 'alunoPerfil'])->name('alunoPerfil');
 Route::get('/aluno/{aluno_id}/meusCursos', [AlunoController::class, 'meusCursos'])->name('alunosCurso');
+Route::get('/aluno/{aluno_id}/telaInicialAluno', [AlunoController::class, 'telaInicialAluno'])->name('telaInicialAluno');
 //CURSOS
 Route::get('/cursos', [CursoController::class, 'cursos'])->name('cursos');
 Route::get('/cursos/{curso_id}', [CursoController::class, 'get'])->name('cursoId');
-Route::get('/cadastrarCurso', [CursoController::class, 'create']);
-Route::post('criarCurso', [CursoController::class, 'store']);
 //INSTRUTOR
 Route::get('/instrutor/{intrutor_id}', [InstrutorController::class, 'instrutorId'])->name('instrutorId');
 Route::get('/instrutor/{intrutor_id}/instrutorPerfil', [InstrutorController::class, 'instrutorPerfil'])->name('instrutorPerfil');
@@ -49,13 +42,9 @@ Route::get('/instrutor/{intrutor_id}/cursosInstrutor', [InstrutorController::cla
 Route::get('/instrutor/{intrutor_id}/cadastrarCurso',[InstrutorController::class,'cadastrarCurso'])->name('cadastrarCurso');
 //Eventos
 Route::get('/eventos', [EventoController::class, 'eventos']);
-Route::get('/criarEvento', [EventoController::class, 'cadastrarEventos']); // somente teste
 //LOGIN & Cadastro
 Route::get('/login', [LoginController::class,'login'])->name('login');
 Route::get('/cadastro', [CadastroController::class,'cadastro'])->name('cadastro');
-Route::get('/cadastro/aluno', [CadastroController::class,'aluno'])->name('aluno');
-Route::get('/cadastro/proponente', [CadastroController::class,'proponente'])->name('proponente');
-Route::get('/cadastro/administrador', [CadastroController::class,'administrador'])->name('administrador');
 
 /*
 Route::post();
@@ -108,12 +97,3 @@ Route::delete();
  *              public function delete(id){ ... }
  *
  */
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
