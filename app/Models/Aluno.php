@@ -16,6 +16,6 @@ class Aluno extends Model
                 'email',
                 'telefone',
                 'endereco',
-                'cpf',
-                'matricula'];
+                'cpf'/*,
+    'matricula'*/];
 }

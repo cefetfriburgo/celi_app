@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string("telefone", 20);
             $table->string("endereco", 255);
             $table->string("cpf", 15)->nullable(false);
-            $table->string("matricula", 30);
+            /*$table->string("matricula", 30);*/
             $table->timestamps();
 
             $table->engine = 'InnoDB';
