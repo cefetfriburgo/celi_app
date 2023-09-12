@@ -25,4 +25,21 @@ class AlunoController extends Controller
     public function alunoPerfil(){
         return view('alunoPerfil');
     }
+
+    public function create(){
+        return view('CadastroAluno');
+    }
+
+    public function store(Request $request){
+        $aluno = new Aluno();
+        $aluno->nome = $request->nome;
+        $aluno->email = $request->email;
+        $aluno->telefone = $request->telefone;
+        $aluno->endereco = $request->endereco;
+        $aluno->cpf = $request->cpf;
+        //$aluno->matricula = $request->matricula;
+
+        $aluno->save();
+        return redirect('/');
+    }
 }

@@ -35,6 +35,8 @@ Route::get('/alunos', [AlunoController::class, 'all'])->name('alunos');
 Route::get('/aluno/{aluno_id}', [AlunoController::class, 'alunosId'])->name('alunosId');
 Route::get('/aluno/{aluno_id}/alunoPerfil', [AlunoController::class, 'alunoPerfil'])->name('alunoPerfil');
 Route::get('/aluno/{aluno_id}/meusCursos', [AlunoController::class, 'meusCursos'])->name('alunosCurso');
+Route::get('/cadastrarAluno', [AlunoController::class,'create']);
+Route::post('/criarAluno', [AlunoController::class,'store']);
 //CURSOS
 Route::get('/cursos', [CursoController::class, 'cursos'])->name('cursos');
 Route::get('/cursos/{curso_id}', [CursoController::class, 'get'])->name('cursoId');
@@ -51,7 +53,7 @@ Route::get('/criarEvento', [EventoController::class, 'cadastrarEventos']); // so
 //LOGIN & Cadastro
 Route::get('/login', [LoginController::class,'login'])->name('login');
 Route::get('/cadastro', [CadastroController::class,'cadastro'])->name('cadastro');
-Route::get('/cadastro/aluno', [CadastroController::class,'aluno'])->name('aluno');
+//Route::get('/cadastro/aluno', [CadastroController::class,'aluno'])->name('aluno');
 Route::get('/cadastro/proponente', [CadastroController::class,'proponente'])->name('proponente');
 Route::get('/cadastro/administrador', [CadastroController::class,'administrador'])->name('administrador');
 
