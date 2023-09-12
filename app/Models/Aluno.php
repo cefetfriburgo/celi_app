@@ -9,7 +9,7 @@ class Aluno extends Model
 {
     use HasFactory;
 
-    protected $table = 'aluno';
+    protected $table = 'alunos';
 
     protected $fillable = [
                 'nome',

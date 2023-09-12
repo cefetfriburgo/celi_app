@@ -20,4 +20,19 @@ class CursoController extends Controller
 
         //return view('curso')->with("curso", $curso);
     }
+
+    public function create(){
+        return view('cadastrarCurso');
+    }
+
+    public function store(Request $request){
+        $curso = new Curso();
+        $curso->nome = $request->nome;
+        $curso->descricao = $request->descricao;
+        $curso->carga_horaria = $request->cargaHoraria;
+
+        $curso->save();
+
+        return redirect('/');
+    }
 }

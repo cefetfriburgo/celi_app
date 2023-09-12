@@ -11,4 +11,8 @@ class EventoController extends Controller
         $eventos = Evento::all();
         return view('eventos', ['eventos' => $eventos]);
     }
+
+    public function cadastrarEventos() {
+        return view('cadastroEventos');
+    }
 }
