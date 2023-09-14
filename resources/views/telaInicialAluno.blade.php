@@ -7,7 +7,7 @@ Tela incial aluno
 
 <div class="container mt-5 mb-5">
     <div class="container bg-body-tertiary rounded p-4">
-        <h1 class="text-center border-bottom pb-3">Bem-vindo, {{ $aluno->nome }}!</h1>
+        <h1 class="text-center border-bottom pb-3">Bem-vindo{{--, {{ $aluno->nome }}! --}}</h1>
     </div>
     <div class="container mt-3 mb-3">
         <div class="d-grid">
