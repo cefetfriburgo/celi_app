@@ -9,6 +9,8 @@ use App\Http\Controllers\CursoController;
 use App\Http\Controllers\EventoController;
 use App\Http\Controllers\InstrutorController;
 use App\Http\Controllers\LoginController;
+use Laravel\Jetstream\Rules\Role;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,6 +28,8 @@ Route::get('/comoParticipar', [IndexController::class,'comoParticipar'])->name('
 Route::get('/sobreNos', [IndexController::class,'sobreNos'])->name('sobreNos');
 Route::get('/telaInicialProponente',[IndexController::class,'telaInicialProponente']);
 Route::get('/telaInicialAdmin',[IndexController::class,'telaInicialAdmin']);
+Route::get('/telaPropostaCursos',[IndexController::class,'telaPropostaCursos']);
+
 //ALUNOS
 Route::get('/alunos', [AlunoController::class, 'all'])->name('alunos');
 Route::get('/aluno/{aluno_id}', [AlunoController::class, 'alunosId'])->name('alunosId');
@@ -34,6 +38,8 @@ Route::get('/aluno/{aluno_id}/meusCursos', [AlunoController::class, 'meusCursos'
 Route::get('/aluno/{aluno_id}/telaInicialAluno', [AlunoController::class, 'telaInicialAluno'])->name('telaInicialAluno');
 Route::get('/cadastrarAluno', [AlunoController::class,'create']);
 Route::post('/criarAluno', [AlunoController::class,'store']);
+Route::get('/aluno/{aluno_id}/telaHistoricoAluno', [AlunoController::class,'telaHistoricoAluno']);
+
 //CURSOS
 Route::get('/cursos', [CursoController::class, 'cursos'])->name('cursos');
 Route::get('/cursos/{curso_id}', [CursoController::class, 'get'])->name('cursoId');
@@ -102,3 +108,12 @@ Route::delete();
  *              public function delete(id){ ... }
  *
  */
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});

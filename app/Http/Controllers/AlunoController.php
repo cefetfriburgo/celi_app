@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Aluno;
+use PhpOption\None;
 
 class AlunoController extends Controller
 {
@@ -43,5 +44,8 @@ class AlunoController extends Controller
 
         $aluno->save();
         return redirect('/');
+    }
+    public function telaHistoricoAluno($aluno_id){
+        return view('telaHistoricoAluno');
     }
 }
