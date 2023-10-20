@@ -43,6 +43,8 @@ Route::get('/aluno/{aluno_id}/telaHistoricoAluno', [AlunoController::class,'tela
 //CURSOS
 Route::get('/cursos', [CursoController::class, 'cursos'])->name('cursos');
 Route::get('/cursos/{curso_id}', [CursoController::class, 'get'])->name('cursoId');
+Route::get('/cadastrarCurso', [CursoController::class,'create']);
+Route::post('/criarCurso', [CursoController::class,'store']);
 //INSTRUTOR
 Route::get('/instrutor/{intrutor_id}', [InstrutorController::class, 'instrutorId'])->name('instrutorId');
 Route::get('/instrutor/{intrutor_id}/instrutorPerfil', [InstrutorController::class, 'instrutorPerfil'])->name('instrutorPerfil');

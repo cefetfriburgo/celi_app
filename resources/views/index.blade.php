@@ -8,7 +8,7 @@ Início
 
             <!-- DESCRIÇÃO -->
             <div class="row bg-body-tertiary rounded my-3 py-3 d-flex align-items-center">
-                <img class="col col-12 col-lg-7" src="img/logo-white-e1535748387518.png" alt="Logo do CELi">
+                <img class="col col-12 col-lg-7" src="img/celi.png" alt="Logo do CELi">
                 <p class="col col-12 col-lg-5 fs-5 m-0 text-center">
                     Intitulado Centro de Educação e Linguagens, o CELi é
                     um Programa de Extensão do CEFET/RJ campus Nova Friburgo que está em funcionamento ininterrupto no

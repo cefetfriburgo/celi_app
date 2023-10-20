@@ -30,9 +30,9 @@ class CursoController extends Controller
         $curso->nome = $request->nome;
         $curso->descricao = $request->descricao;
         $curso->carga_horaria = $request->cargaHoraria;
-        $curso->telefone = $request->telefone;
+        /*$curso->telefone = $request->telefone;
         $curso->endereco = $request->endereco;
-        $curso->cpf = $request->cpf;
+        $curso->cpf = $request->cpf;*/
 
         $curso->save();
 

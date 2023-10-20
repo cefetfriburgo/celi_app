@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" data-bs-theme="dark">
+<html lang="pt-br" data-bs-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -18,7 +18,7 @@
     <nav class="navbar bg-body-tertiary">
         <div class="container">
             <a class="navbar-brand" href="/">
-                <img src="img/logo-white-e1535748387518.png" alt="Logo"
+                <img src="img/celi.png" alt="Logo"
                      class="imageWidth d-inline-block align-text-top">
             </a>
             <a class="btn btn-dark" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
