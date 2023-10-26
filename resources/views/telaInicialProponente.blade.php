@@ -13,7 +13,7 @@ Tela inicial Proponente
             <h1>Nome do proponente</h1>
             <a href="alunocursos.html" class="btn btn-light" style="margin-top: 10px;">Meus cursos</a>
             <a href="alunocursos.html" class="btn btn-light" style="margin-left: 10px; margin-top: 10px;">Propor um Curso</a>
-            <div class="card bg-dark text-white justify-content-left" style="border-radius: 1rem; margin-top: 75px; width: 400px;">
+            <div class="card bg-primary text-white justify-content-left" style="border-radius: 1rem; margin-top: 75px; width: 400px;">
                 <div class="justify-content-left">
                     <div class="card-body p-0 text-right">
                         <div class="mb-md-5 mt-md-4 pb-5">

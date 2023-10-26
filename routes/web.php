@@ -28,7 +28,7 @@ Route::get('/comoParticipar', [IndexController::class,'comoParticipar'])->name('
 Route::get('/sobreNos', [IndexController::class,'sobreNos'])->name('sobreNos');
 Route::get('/telaInicialProponente',[IndexController::class,'telaInicialProponente']);
 Route::get('/telaInicialAdmin',[IndexController::class,'telaInicialAdmin']);
-Route::get('/telaPropostaCursos',[IndexController::class,'telaPropostaCursos']);
+//Route::get('/telaPropostaCursos',[IndexController::class,'telaPropostaCursos']); Não está funcionando
 
 //ALUNOS
 Route::get('/alunos', [AlunoController::class, 'all'])->name('alunos');

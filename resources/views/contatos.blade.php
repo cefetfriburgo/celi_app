@@ -19,8 +19,8 @@ Contatos
 
                 <h5 class="text-center mb-4 pb-2 border-bottom">Outros Contatos</h5>
                 <div style="max-width: 100;;overflow: scroll;">
-                    <table class="table table-striped table-dark">
-                        <thead>
+                    <table class="table table-striped table-light">
+                        <thead class="table-dark">
                         <tr>
                             <th scope="col"></th>
                             <th scope="col">Nome</th>

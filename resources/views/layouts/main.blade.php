@@ -21,7 +21,7 @@
                 <img src="img/celi.png" alt="Logo"
                      class="imageWidth d-inline-block align-text-top">
             </a>
-            <a class="btn btn-dark" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+            <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
                aria-controls="offcanvasExample">
                 <i class="bi bi-list fs-4"></i>
             </a>

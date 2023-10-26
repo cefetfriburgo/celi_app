@@ -6,18 +6,18 @@ Tela inicial administrador
 
 @section('principal')
 
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
     <div class="container">
         <div class="collapse navbar-collapse" style="display: flex; justify-content: left;">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Avaliar propostas de cursos<span class="sr-only"></span></a>
+                    <a class="nav-link text-white" href="#">Avaliar propostas de cursos<span class="sr-only"></span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Criar novas notícias/eventos</a>
+                    <a class="nav-link text-white" href="#">Criar novas notícias/eventos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Visualizar notícias</a>
+                    <a class="nav-link text-white" href="#">Visualizar notícias</a>
                 </li>
             </ul>
         </div>

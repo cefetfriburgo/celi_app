@@ -13,7 +13,7 @@ Aluno
             <div class="row">
                 <div class="col d-inline-flex justify-content-center">
                     <picture>
-                        <img src="/celi/assets/img/avatar.png" class="rounded-circle rotate" alt="avatarImagem">
+                        <img src="img/avatar.png" class="rounded-circle rotate" alt="avatarImagem"> <!-- Imagem do avatar não está sendo exibida na view -->
                     </picture>
                 </div>
                 <div class="col">
