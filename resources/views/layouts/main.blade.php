@@ -11,7 +11,7 @@
     <script src="/js/bootstrap.min.js" defer></script>
     <link rel="stylesheet" href="/css/app.css">
     <title>Celi - @yield('titulo')</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
