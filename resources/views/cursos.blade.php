@@ -1,13 +1,13 @@
 @extends('layouts.main')
 
 @section('titulo')
-Cursos
+Eventos
 @endsection
 
 @section('principal')
 <main class="container mt-5 mb-5">
     <div class="container bg-body-tertiary rounded p-4">
-        <h1 class="text-center mb-4">Cursos</h1>
+        <h1 class="text-center mb-4">Eventos</h1>
         <div class="row">
         <div class="card mb-3">
             <h5 class="card-header mt-2">Inscrições abertas!</h5>

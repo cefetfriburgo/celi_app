@@ -7,7 +7,7 @@ Cadastro Aluno
 @section('principal')
 
 <div class="col-md-6">
-  <h2 class="mb-4">Registro como Aluno</h2>
+  <h2 class="mb-4">Cadastro como Aluno</h2>
   <form action="criarAluno" method="post">
     @csrf
     <div class="mb-3">
@@ -38,7 +38,7 @@ Cadastro Aluno
       <label for="confirmarSenha" class="form-label">Confirmar Senha</label>
       <input type="password" class="form-control" id="confirmarSenha" required>
     </div> --}}
-    <button type="submit" class="btn btn-primary" style="margin-bottom: 15px;">Registrar</button>
+    <button type="submit" class="btn btn-primary" style="margin-bottom: 15px;">Cadastrar</button>
   </form>
 </div>
 

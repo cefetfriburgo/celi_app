@@ -42,7 +42,7 @@ Cadastro Proponente
           <label for="confirmarSenha" class="form-label">Confirmar Senha</label>
           <input type="password" class="form-control" id="confirmarSenha" required>
         </div>
-        <button type="submit" class="btn btn-primary">Cadastrar Proponente</button>
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
       </form>
     </div>
   </div>
