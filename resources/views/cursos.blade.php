@@ -14,7 +14,7 @@ Eventos
             <div class="card-body">
               <h5 class="card-title">Curso Lorem</h5>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem fuga iure culpa illo! Similique harum id quisquam debitis minima, autem repellendus expedita inventore temporibus suscipit voluptatum? Beatae ipsum inventore commodi!</p>
-              <a href="curso-bootstrap.html" class="btn btn-primary">Veja mais</a>
+              <a href="/curso/informacao" class="btn btn-primary">Veja mais</a>
             </div>
           </div>
           <div class="card mb-3">

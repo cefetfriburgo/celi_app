@@ -38,4 +38,8 @@ class CursoController extends Controller
 
         return redirect('/');
     }
+
+    public function getInformacoes(){
+        return view ('eventoInformacao');
+    }
 }

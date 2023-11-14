@@ -3,7 +3,7 @@
 @section('titulo')
 Cadastro
 @endsection
-
+<!--Verificar se esse arquivo continuará na aplicação-->
 @section('principal')
 <main class="container mt-5 mb-5">
     <div class="container bg-body-tertiary rounded p-4">

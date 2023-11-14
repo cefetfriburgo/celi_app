@@ -12,9 +12,9 @@ Instrutor
         <div class="container mt-5">
             <div class="row">
                 <div class="col d-inline-flex justify-content-center">
-                    <picture>
-                        <img src="/celi/assets/img/avatar.png" class="rounded-circle rotate" alt="avatarImagem">
-                    </picture>
+                    
+                        <img src="/public/img/avatar.png" class="rounded-circle rotate" alt="avatarImagem">
+                    
                 </div>
                 <div class="col">
                     <h4>Nome:</h4>

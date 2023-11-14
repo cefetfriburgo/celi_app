@@ -29,7 +29,7 @@ Tela inicial Proponente
         </div>
         <div class="col-md-4">
             <img src="img/avatar.png" alt="Foto do Proponente" />
-            <a href="http://127.0.0.1:8000/Instrutor" class="btn btn-primary" style="margin-top: 10px;">Meus dados pessoais</a>
+            <a href="instrutor/1/perfil" class="btn btn-primary" style="margin-top: 10px;">Meus dados pessoais</a>
         </div>
 
         @endsection

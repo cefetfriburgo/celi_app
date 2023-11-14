@@ -8,7 +8,7 @@ Cadastro Aluno
 
 <div class="col-md-6">
   <h2 class="mb-4">Cadastro como Aluno</h2>
-  <form action="criarAluno" method="post">
+  <form action="aluno/criar" method="post">
     @csrf
     <div class="mb-3">
       <label for="nome" class="form-label">Nome</label>
@@ -30,14 +30,14 @@ Cadastro Aluno
       <label for="cpf" class="form-label">CPF</label>
       <input type="text" class="form-control" name="cpf" id="cpf" required>
     </div>
-    {{-- <div class="mb-3">
+    <!-- <div class="mb-3">
       <label for="senha" class="form-label">Senha</label>
       <input type="password" class="form-control" id="senha" required>
     </div>
     <div class="mb-3">
       <label for="confirmarSenha" class="form-label">Confirmar Senha</label>
       <input type="password" class="form-control" id="confirmarSenha" required>
-    </div> --}}
+    </div> -->
     <button type="submit" class="btn btn-primary" style="margin-bottom: 15px;">Cadastrar</button>
   </form>
 </div>

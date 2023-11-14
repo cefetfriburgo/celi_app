@@ -32,22 +32,25 @@ Route::get('/telaInicialAdmin',[IndexController::class,'telaInicialAdmin']);
 
 //ALUNOS
 Route::get('/alunos', [AlunoController::class, 'all'])->name('alunos');
+Route::get('/aluno/cadastrar', [AlunoController::class,'create']);
+Route::post('/aluno/criar', [AlunoController::class,'store']);
 Route::get('/aluno/{aluno_id}', [AlunoController::class, 'alunosId'])->name('alunosId');
 Route::get('/aluno/{aluno_id}/alunoPerfil', [AlunoController::class, 'alunoPerfil'])->name('alunoPerfil');
 Route::get('/aluno/{aluno_id}/meusCursos', [AlunoController::class, 'meusCursos'])->name('alunosCurso');
 Route::get('/aluno/{aluno_id}/telaInicialAluno', [AlunoController::class, 'telaInicialAluno'])->name('telaInicialAluno');
-Route::get('/cadastrarAluno', [AlunoController::class,'create']);
-Route::post('/criarAluno', [AlunoController::class,'store']);
 Route::get('/aluno/{aluno_id}/telaHistoricoAluno', [AlunoController::class,'telaHistoricoAluno']);
 
 //CURSOS
 Route::get('/cursos', [CursoController::class, 'cursos'])->name('cursos');
+Route::get('/curso/cadastrar', [CursoController::class,'create']);
+Route::post('/curso/criar', [CursoController::class,'store']);
+Route::get('/curso/informacao', [CursoController::class,'getInformacoes']);
 Route::get('/cursos/{curso_id}', [CursoController::class, 'get'])->name('cursoId');
-Route::get('/cadastrarCurso', [CursoController::class,'create']);
-Route::post('/criarCurso', [CursoController::class,'store']);
+Route::post('{aluno_id}/inscreverAlunoEvento', [CursoController::class, 'inscreverAluno']);
+
 //INSTRUTOR
 Route::get('/instrutor/{intrutor_id}', [InstrutorController::class, 'instrutorId'])->name('instrutorId');
-Route::get('/instrutor/{intrutor_id}/instrutorPerfil', [InstrutorController::class, 'instrutorPerfil'])->name('instrutorPerfil');
+Route::get('/instrutor/{intrutor_id}/perfil', [InstrutorController::class, 'instrutorPerfil'])->name('instrutorPerfil');
 Route::get('/instrutor/{intrutor_id}/cursosInstrutor', [InstrutorController::class, 'meusCursos'])->name('meusCursos');
 Route::get('/instrutor/{intrutor_id}/cadastrarCurso',[InstrutorController::class,'cadastrarCurso'])->name('cadastrarCurso');
 //Eventos

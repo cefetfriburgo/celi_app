@@ -35,7 +35,7 @@ Login
             </div>
             <div>
               <p class="mb-0">Primeira vez por aqui?</p> <br>
-              <a href="cadastrarAluno" class="text-white fw-bold">Cadastre-se como aluno</a> <br>
+              <a href="aluno/cadastrar" class="text-white fw-bold">Cadastre-se como aluno</a> <br>
               <a href="cadastro/proponente" class="text-white fw-bold">Cadastre-se como proponente</a>
             </div>
           </div>

@@ -24,7 +24,7 @@ Início
                         perspiciatis porro culpa quibusdam obcaecati quidem aspernatur. Neque corporis libero
                         perspiciatis
                         molestias odio rerum illo quam architecto amet.</p>
-                    <a href="#" class="btn btn-primary">Veja mais</a>
+                    <a href="/cursos" class="btn btn-primary">Veja mais</a>
                 </div>
             </div>
 
