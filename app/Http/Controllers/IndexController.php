@@ -11,7 +11,7 @@ use App\Models\Local;
 
 class IndexController extends Controller
 {
-    public function home() {
+    public function showHome() {
 /*
         return ['cursos' => Curso::all(),
                 'alunos' => Aluno::all(),
@@ -23,21 +23,38 @@ class IndexController extends Controller
         //return view('index')->with('cursos', Curso::all());
     }
 
-    public function contatos(){
+    /**
+     * Retorna a tela de informações de contato
+     */
+    public function showContatos(){
         return view('contatos');
     }
 
-    public function comoParticipar(){
+    /**
+     * Retorna a tela de instruções de como participar
+     */
+    public function showComoParticipar(){
         return view('comoParticipar');
     }
 
-    public function sobreNos(){
+    /**
+     * Retorna a tela de informações sobre os colaboradores do CELi
+     */
+    public function showSobreNos(){
         return view('sobreNos');
     }
-    public function telaInicialProponente(){
+
+    /**
+     * Retorna a tela de boas vindas do proponente
+     */
+    public function showTelaInicialProponente(){
         return view('telaInicialProponente');
     }
-    public function telaInicialAdmin(){
+
+    /**
+     * Retorna a tela de boas vindas do administrador
+     */
+    public function showTelaInicialAdmin(){
         return view('telaInicialAdmin');
     }
 }

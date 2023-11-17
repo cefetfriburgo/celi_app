@@ -12,7 +12,7 @@ Eventos
     <div class="card-body">
       <h5 class="card-title">{{$evento->titulo}}</h5>
       <p class="card-text">{{$evento->descricao}}</p>
-      <a href="/eventos/{{$evento->id}}" class="btn btn-primary">Veja mais</a>
+      <a href="/eventos/{{$evento->id}}/informacao" class="btn btn-primary">Veja mais</a>
     </div>
   </div>
 @endforeach

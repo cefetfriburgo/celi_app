@@ -7,32 +7,39 @@ use Illuminate\Http\Request;
 use App\Models\Aluno;
 use PhpOption\None;
 
-class AlunoController extends Controller
+class ParticipanteController extends Controller
 {
-    public function all()
+    public function index()
     {
         return view('aluno')->with('alunos', Aluno::all());
     }
 
-    public function alunosId($aluno_id) {
+    public function show($aluno_id) {
         return view('aluno')->with('aluno', Aluno::find($aluno_id));
     }
 
-    public function meusCursos($aluno_id) {
+    public function showCursos($aluno_id) {
 
         return view('meusCursos');
     }
 
-    public function alunoPerfil(){
+    public function showPerfil(){
         return view('alunoPerfil');
     }
-    public function telaInicialAluno(){
+    public function showTelaInicialAluno(){
         return view('telaInicialAluno');
     }
+
+    /**
+     * Retorna a tela de cadastro de alunos
+     */
     public function create(){
-        return view('CadastroAluno');
+        return view('cadastroAluno');
     }
 
+    /**
+     * Salva um novo aluno no banco de dados da aplicação
+     */
     public function store(Request $request){
         $aluno = new Aluno();
         $aluno->nome = $request->nome;
@@ -45,7 +52,7 @@ class AlunoController extends Controller
         $aluno->save();
         return redirect('/');
     }
-    public function telaHistoricoAluno($aluno_id){
+    public function showTelaHistoricoAluno($aluno_id){
         return view('telaHistoricoAluno');
     }
 }

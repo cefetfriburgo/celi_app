@@ -22,7 +22,7 @@ O sistema está sendo desenvolvido e mantido por:
 - Isadora Passos
 - João Guilherme
 - Rian
-- Gabriel
+- Gabriel Pinto de Souza
 - Gabriel Theóphilo
 - Fabrício
 - Caio Luckas

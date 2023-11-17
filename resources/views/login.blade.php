@@ -29,13 +29,13 @@ Login
               </div>
 
               <p class="small mb-5 pb-lg-2"><a class="text-white" href="#!">Esqueci minha senha</a></p>
-              <!-- <button class="btn btn-outline-light btn-lg px-5 mb-3" type="submit"><a class="text-white" href="{{route('alunosId', ['aluno_id'=>1])}}">Entrar Como Aluno</a></button>
-              <button class="btn btn-outline-light btn-lg px-5" type="submit"><a href="{{route('alunosId', ['aluno_id'=>1])}}">Entrar Como Colaborador</a></button> -->
+              {{-- <button class="btn btn-outline-light btn-lg px-5 mb-3" type="submit"><a class="text-white" href="{{route('alunosId', ['aluno_id'=>1])}}">Entrar Como Aluno</a></button>
+              <button class="btn btn-outline-light btn-lg px-5" type="submit"><a href="{{route('alunosId', ['aluno_id'=>1])}}">Entrar Como Colaborador</a></button> --}}
               <a class="btn btn-light text-primary" href="#">Entrar</a>
             </div>
             <div>
               <p class="mb-0">Primeira vez por aqui?</p> <br>
-              <a href="aluno/cadastrar" class="text-white fw-bold">Cadastre-se como aluno</a> <br>
+              <a href="alunos/cadastrar" class="text-white fw-bold">Cadastre-se como aluno</a> <br>
               <a href="cadastro/proponente" class="text-white fw-bold">Cadastre-se como proponente</a>
             </div>
           </div>

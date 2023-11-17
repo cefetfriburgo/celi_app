@@ -49,7 +49,7 @@ Cadastro
 
 
 
-                                <button type="submit" class="btn btn-outline-info btn-lg mb-1"><a href="{{route('alunosId', ['aluno_id'=>1])}}">Cadastrar</a></button>
+                                <button type="submit" class="btn btn-outline-info btn-lg mb-1"><a href="#">Cadastrar</a></button>
 
                             </form>
 

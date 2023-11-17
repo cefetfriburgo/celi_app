@@ -8,7 +8,7 @@ Cadastro
 <main class="container mt-5 mb-5">
     <div class="container bg-body-tertiary rounded p-4">
         <h1 class="text-center mb-4 pb-3 border-bottom">Cadastrar Evento</h1>
-        <form action="curso/criar" method="post">
+        <form action="criar" method="post">
             @csrf
             <div class="form-group mb-2">
                 <label for="nome">Nome da Proposta</label>

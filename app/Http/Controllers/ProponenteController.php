@@ -6,21 +6,25 @@ use Illuminate\Http\Request;
 
 use App\Models\Instrutor;
 
-class InstrutorController extends Controller
+class ProponenteController extends Controller
 {
-    public function instrutorId($instrutor_id) {
+    
+    public function show($instrutor_id) {
         return view('instrutor')->with('instrutor', Instrutor::find($instrutor_id));
     }
 
+    /**
+     * Retorna a tela de cursos a qual o proponente ministra ou participa
+     */
     public function meusCursos() {
         return view('cursosInstrutor');
     }
 
-    public function instrutorPerfil(){
+    /**
+     * Retorna a tela do perfil do instrutor
+     */
+    public function showPerfil(){
         return view('instrutorPerfil');
     }
-
-    public function cadastrarCurso(){
-        return view('cadastrarCurso');
-    }
+    
 }

@@ -8,7 +8,7 @@ Cadastro Aluno
 
 <div class="col-md-6">
   <h2 class="mb-4">Cadastro como Aluno</h2>
-  <form action="aluno/criar" method="post">
+  <form action="criar" method="post">
     @csrf
     <div class="mb-3">
       <label for="nome" class="form-label">Nome</label>

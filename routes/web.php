@@ -3,12 +3,12 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\IndexController;
-use App\Http\Controllers\AlunoController;
+use App\Http\Controllers\ParticipanteController;
 use App\Http\Controllers\CadastroController;
-use App\Http\Controllers\CursoController;
 use App\Http\Controllers\EventoController;
-use App\Http\Controllers\InstrutorController;
+use App\Http\Controllers\ProponenteController;
 use App\Http\Controllers\LoginController;
+use App\Models\Evento;
 use Laravel\Jetstream\Rules\Role;
 
 /*
@@ -22,45 +22,41 @@ use Laravel\Jetstream\Rules\Role;
 |
 */
 //INDEX & VARIADAS
-Route::get('/', [IndexController::class, 'home'])->name('home');
-Route::get('/contatos', [IndexController::class,'contatos']);
-Route::get('/comoParticipar', [IndexController::class,'comoParticipar'])->name('comoParticipar');
-Route::get('/sobreNos', [IndexController::class,'sobreNos'])->name('sobreNos');
-Route::get('/telaInicialProponente',[IndexController::class,'telaInicialProponente']);
-Route::get('/telaInicialAdmin',[IndexController::class,'telaInicialAdmin']);
+Route::get('/', [IndexController::class, 'showHome'])->name('showHome');
+Route::get('/contatos', [IndexController::class,'showContatos']);
+Route::get('/comoParticipar', [IndexController::class,'showComoParticipar'])->name('showComoParticipar');
+Route::get('/sobreNos', [IndexController::class,'showSobreNos'])->name('showSobreNos');
+Route::get('/telaInicialProponente',[IndexController::class,'showTelaInicialProponente']);
+Route::get('/telaInicialAdmin',[IndexController::class,'showTelaInicialAdmin']);
 //Route::get('/telaPropostaCursos',[IndexController::class,'telaPropostaCursos']); Não está funcionando
 
 //ALUNOS
-Route::get('/alunos', [AlunoController::class, 'all'])->name('alunos');
-Route::get('/aluno/cadastrar', [AlunoController::class,'create']);
-Route::post('/aluno/criar', [AlunoController::class,'store']);
-Route::get('/aluno/{aluno_id}', [AlunoController::class, 'alunosId'])->name('alunosId');
-Route::get('/aluno/{aluno_id}/alunoPerfil', [AlunoController::class, 'alunoPerfil'])->name('alunoPerfil');
-Route::get('/aluno/{aluno_id}/meusCursos', [AlunoController::class, 'meusCursos'])->name('alunosCurso');
-Route::get('/aluno/{aluno_id}/telaInicialAluno', [AlunoController::class, 'telaInicialAluno'])->name('telaInicialAluno');
-Route::get('/aluno/{aluno_id}/telaHistoricoAluno', [AlunoController::class,'telaHistoricoAluno']);
+Route::get('/alunos', [ParticipanteController::class, 'index'])->name('index');
+Route::get('/alunos/cadastrar', [ParticipanteController::class,'create']);
+Route::post('/alunos/criar', [ParticipanteController::class,'store']);
+Route::get('/alunos/{aluno_id}', [ParticipanteController::class, 'show'])->name('show');
+Route::get('/alunos/{aluno_id}/perfil', [ParticipanteController::class, 'showPerfil'])->name('showPerfil');
+Route::get('/alunos/{aluno_id}/cursos', [ParticipanteController::class, 'showCursos'])->name('showCurso');
+Route::get('/alunos/{aluno_id}/telaInicial', [ParticipanteController::class, 'showTelaInicial'])->name('showTelaInicialAluno');
+Route::get('/alunos/{aluno_id}/telaHistorico', [ParticipanteController::class,'showTelaHistoricoAluno']);
 
-//CURSOS
-Route::get('/cursos', [CursoController::class, 'cursos'])->name('cursos');
-Route::get('/curso/cadastrar', [CursoController::class,'create']);
-Route::post('/curso/criar', [CursoController::class,'store']);
-Route::get('/curso/informacao', [CursoController::class,'getInformacoes']);
-Route::get('/cursos/{curso_id}', [CursoController::class, 'get'])->name('cursoId');
-Route::post('{aluno_id}/inscreverAlunoEvento', [CursoController::class, 'inscreverAluno']);
+//Eventos
+Route::get('/eventos', [EventoController::class, 'index']);
+Route::get('/eventos/cadastrar', [EventoController::class,'create']);
+Route::post('/eventos/criar', [EventoController::class,'store']);
+Route::get('/eventos/{evento_id}/informacao', [EventoController::class,'showInformacoes']);
+Route::get('/eventos/{evento_id}', [EventoController::class, 'get'])->name('cursoId');
+Route::post('/eventos/{evento_id}/{aluno_id}/inscrever', [EventoController::class, 'inscrever']);
 
 //INSTRUTOR
-Route::get('/instrutor/{intrutor_id}', [InstrutorController::class, 'instrutorId'])->name('instrutorId');
-Route::get('/instrutor/{intrutor_id}/perfil', [InstrutorController::class, 'instrutorPerfil'])->name('instrutorPerfil');
-Route::get('/instrutor/{intrutor_id}/cursosInstrutor', [InstrutorController::class, 'meusCursos'])->name('meusCursos');
-Route::get('/instrutor/{intrutor_id}/cadastrarCurso',[InstrutorController::class,'cadastrarCurso'])->name('cadastrarCurso');
-//Eventos
-Route::get('/eventos', [EventoController::class, 'eventos']);
+Route::get('/proponente/{intrutor_id}', [ProponenteController::class, 'show'])->name('show');
+Route::get('/proponente/{intrutor_id}/perfil', [ProponenteController::class, 'showPerfil'])->name('showPerfil');
+Route::get('/proponente/{intrutor_id}/cursosInstrutor', [ProponenteController::class, 'showCursos'])->name('showCursos');
 //LOGIN & Cadastro
 Route::get('/login', [LoginController::class,'login'])->name('login');
-Route::get('/cadastro', [CadastroController::class,'cadastro'])->name('cadastro');
-//Route::get('/cadastro/aluno', [CadastroController::class,'aluno'])->name('aluno');
-Route::get('/cadastro/proponente', [CadastroController::class,'proponente'])->name('proponente');
-Route::get('/cadastro/administrador', [CadastroController::class,'administrador'])->name('administrador');
+Route::get('/cadastro', [CadastroController::class,'create'])->name('create');
+Route::get('/cadastro/proponente', [CadastroController::class,'createProponente'])->name('createProponente');
+Route::get('/cadastro/administrador', [CadastroController::class,'createAdministrador'])->name('createAdministrador');
 
 /*
 Route::post();

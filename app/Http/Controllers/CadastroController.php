@@ -4,21 +4,27 @@ namespace App\Http\Controllers;
 
 class CadastroController extends Controller
 {
-    public function cadastro()
+    public function create()
     {
         return view('cadastro');
     }
 
-    public function aluno(){
+    /*public function aluno(){
         return view('CadastroAluno');
+    }*/
+
+    /**
+     * Retorna a tela de cadastro do proponente
+     */
+    public function createProponente(){
+        return view('cadastroProponente');
     }
 
-    public function proponente(){
-        return view('CadastroProponente');
-    }
-
-    public function administrador(){
-        return view('CadastroAdministrador');
+    /**
+     * Retorna a tela de cadastro do administrador
+     */
+    public function createAdministrador(){
+        return view('cadastroAdministrador');
     }
 
 
