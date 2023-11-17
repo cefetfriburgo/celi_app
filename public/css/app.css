@@ -3,3 +3,12 @@
 .imageWidth {
     width: 125px !important;
 }
+.elemento_tem_item{
+    text-decoration: none;
+    color: black;
+    
+}
+.elemento_tem_item:hover{
+    color:black;
+    text-decoration: underline;
+}
