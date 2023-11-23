@@ -12,7 +12,7 @@ class EventoController extends Controller
      * Exibe todos os eventos cadastrados da aplicação na tela de eventos.
      */
     public function index() {
-        $eventos = Evento::all();
+        $eventos = Curso::all();
         return view('eventos', ['eventos' => $eventos]);
     }
 
@@ -41,6 +41,7 @@ class EventoController extends Controller
         $curso->nome = $request->nome;
         $curso->descricao = $request->descricao;
         $curso->carga_horaria = $request->cargaHoraria;
+        $curso->tipo = $request->tipo;
         /*$curso->telefone = $request->telefone;
         $curso->endereco = $request->endereco;
         $curso->cpf = $request->cpf;*/

@@ -8,17 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Turma;
 use App\Models\Instrutor;
 
-class Curso extends Model
+class Curso extends Model //alterar nome da classe Curso para Evento
 {
 
     use HasFactory;
 
-    protected $table = 'cursos';
+    protected $table = 'eventos';
 
     protected $fillable = [
                 'nome',
                 'descricao',
                 'carga_horaria',
+                'tipo'
                 ];
 
     public function instrutores_por_curso_id($cursoId) {

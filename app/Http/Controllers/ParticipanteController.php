@@ -18,20 +18,30 @@ class ParticipanteController extends Controller
         return view('aluno')->with('aluno', Aluno::find($aluno_id));
     }
 
+    /**
+     * Retorna os cursos do participante
+     */
+
     public function showCursos($aluno_id) {
 
         return view('meusCursos');
     }
-
+    /**
+     * Retorna a tela do perfil do participante
+     */
     public function showPerfil(){
         return view('alunoPerfil');
     }
+
+    /**
+     * Retorna a tela inicial do participante
+     */
     public function showTelaInicialAluno(){
         return view('telaInicialAluno');
     }
 
     /**
-     * Retorna a tela de cadastro de alunos
+     * Retorna a tela de cadastro dos participantes
      */
     public function create(){
         return view('cadastroAluno');
@@ -52,6 +62,9 @@ class ParticipanteController extends Controller
         $aluno->save();
         return redirect('/');
     }
+    /**
+     * Retorna a tela de histórico do aluno
+     */
     public function showTelaHistoricoAluno($aluno_id){
         return view('telaHistoricoAluno');
     }

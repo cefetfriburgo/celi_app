@@ -11,17 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('proponente_tem_cursos', function (Blueprint $table) {
+        Schema::create('proponente_eventos', function (Blueprint $table) {
             $table->timestamps();
             $table->bigInteger('proponente_id')->unsigned();
-            $table->bigInteger('curso_id')->unsigned();
+            $table->bigInteger('evento_id')->unsigned();
 
             $table->foreign('proponente_id')
                 ->references('id')->on('proponentes')
                 ->onDelete('cascade');
 
-            $table->foreign('curso_id')
-                ->references('id')->on('cursos')
+            $table->foreign('evento_id')
+                ->references('id')->on('eventos')
                 ->onDelete('cascade');
         });
     }
