@@ -47,6 +47,7 @@ Route::post('/eventos/criar', [EventoController::class,'store']);
 Route::get('/eventos/{evento_id}/informacao', [EventoController::class,'showInformacoes']);
 Route::get('/eventos/{evento_id}', [EventoController::class, 'get'])->name('cursoId');
 Route::post('/eventos/{evento_id}/{aluno_id}/inscrever', [EventoController::class, 'inscrever']);
+Route::get('/listaAlunosEventos', [EventoController::class, 'alunosEmEventos']);
 
 //INSTRUTOR
 Route::get('/proponente/{intrutor_id}', [ProponenteController::class, 'show'])->name('show');

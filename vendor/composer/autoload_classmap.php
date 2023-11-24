@@ -20,6 +20,7 @@ return array(
     'App\\Http\\Controllers\\CursoController' => $baseDir . '/app/Http/Controllers/CursoController.php',
     'App\\Http\\Controllers\\EventoController' => $baseDir . '/app/Http/Controllers/EventoController.php',
     'App\\Http\\Controllers\\IndexController' => $baseDir . '/app/Http/Controllers/IndexController.php',
+    'App\\Http\\Controllers\\InstrutorController' => $baseDir . '/app/Http/Controllers/InstrutorController.php',
     'App\\Http\\Controllers\\LoginController' => $baseDir . '/app/Http/Controllers/LoginController.php',
     'App\\Http\\Controllers\\NoticiaController' => $baseDir . '/app/Http/Controllers/NoticiaController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',

@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Evento;
+use App\Models\Aluno;
 use Illuminate\Http\Request;
 use App\Models\Curso;
-use App\Models\Evento;
 
 class EventoController extends Controller
 {
@@ -63,5 +64,9 @@ class EventoController extends Controller
      */
     public function inscrever(){
 
+    }
+    public function alunosEmEventos(){
+        $alunos = Aluno::all();
+        return view('listaAlunosEvento', ['alunos' => $alunos]);
     }
 }
