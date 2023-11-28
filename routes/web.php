@@ -37,7 +37,7 @@ Route::post('/alunos/criar', [ParticipanteController::class,'store']);
 Route::get('/alunos/{aluno_id}', [ParticipanteController::class, 'show'])->name('show');
 Route::get('/alunos/{aluno_id}/perfil', [ParticipanteController::class, 'showPerfil'])->name('showPerfil');
 Route::get('/alunos/{aluno_id}/cursos', [ParticipanteController::class, 'showCursos'])->name('showCurso');
-Route::get('/alunos/{aluno_id}/telaInicial', [ParticipanteController::class, 'showTelaInicial'])->name('showTelaInicialAluno');
+Route::get('/alunos/{aluno_id}/telaInicial', [ParticipanteController::class, 'showTelaInicialAluno'])->name('showTelaInicialAluno');
 Route::get('/alunos/{aluno_id}/telaHistorico', [ParticipanteController::class,'showTelaHistoricoAluno']);
 
 //Eventos
@@ -46,8 +46,8 @@ Route::get('/eventos/cadastrar', [EventoController::class,'create']);
 Route::post('/eventos/criar', [EventoController::class,'store']);
 Route::get('/eventos/{evento_id}/informacao', [EventoController::class,'showInformacoes']);
 Route::get('/eventos/{evento_id}', [EventoController::class, 'get'])->name('cursoId');
-Route::post('/eventos/{evento_id}/{aluno_id}/inscrever', [EventoController::class, 'inscrever']);
-Route::get('/listaAlunosEventos', [EventoController::class, 'alunosEmEventos']);
+Route::post('/eventos/{evento_id}/inscrever', [EventoController::class, 'inscrever']);
+Route::get('/eventos/{evento_id}/alunos', [EventoController::class, 'showAlunosEmEventos']);
 
 //INSTRUTOR
 Route::get('/proponente/{intrutor_id}', [ProponenteController::class, 'show'])->name('show');

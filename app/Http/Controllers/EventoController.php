@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Evento;
 use App\Models\Aluno;
+use App\Models\AlunoTemEvento;
 use Illuminate\Http\Request;
 use App\Models\Curso;
 
@@ -55,17 +56,31 @@ class EventoController extends Controller
     /**
      * Retorna a tela de informações de um evento específico
      */
-    public function showInformacoes(){
-        return view ('eventoInformacao');
+    public function showInformacoes($eventoID){
+        $evento = Evento::find($eventoID);
+        return view ('eventoInformacao', ['evento' => $evento]);
     }
 
     /**
-     * Inscreve um participante na base de dados da aplicação e o relaciona com o evento correspondete
+     * Inscreve um participante na base de dados da aplicação e o relaciona com o evento correspondente
      */
-    public function inscrever(){
+    public function inscrever($eventoId, Request $request){
+        //Implementar lógica para que não seja possível cadastrar um aluno em um evento que ele já está registrado como participante
 
+        $alunoEvento = new AlunoTemEvento();
+        $alunoEvento->aluno_id = $request->idAluno;
+        $alunoEvento->evento_id = $eventoId;
+
+        $alunoEvento->save();
+
+        return redirect('/');
+    
     }
-    public function alunosEmEventos(){
+
+    /**
+     * Exibe todos os alunos inscritos em um determinado evento.
+     */
+    public function showAlunosEmEventos(){//Corrigir lógica, pegar apenas os alunos inscritos naquele evento específico.
         $alunos = Aluno::all();
         return view('listaAlunosEvento', ['alunos' => $alunos]);
     }

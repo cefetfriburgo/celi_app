@@ -11,6 +11,9 @@ use App\Models\Local;
 
 class IndexController extends Controller
 {
+    /**
+     * Retorna a página home da aplicação
+     */
     public function showHome() {
 /*
         return ['cursos' => Curso::all(),
