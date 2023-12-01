@@ -87,17 +87,17 @@ Início
                             nesciunt eveniet vero culpa. Dicta, dolore.</p>
                     </div>
 
-                    <ol class="list-group list-group-numbered">
-                        @foreach($cursos as $curso)
+                    {{-- <ol class="list-group list-group-numbered">
+                        @foreach($eventos as $evento)
                         <li class="list-group-item d-flex justify-content-between align-items-start ">
                             <div class="ms-2 me-auto">
-                                <div class="fw-bold">{{ $curso->nome }}</div>
-                                {{ $curso->descricao }}
+                                <div class="fw-bold">{{ $evento->nome }}</div>
+                                {{ $evento->descricao }}
                             </div>
                             <span class="badge bg-primary rounded-pill">30/06/2023</span>
                         </li>
                         @endforeach
-                    </ol>
+                    </ol> --}}
                 </div>
             </div>
 @endsection

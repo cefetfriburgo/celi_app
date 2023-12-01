@@ -15,15 +15,8 @@ class IndexController extends Controller
      * Retorna a página home da aplicação
      */
     public function showHome() {
-/*
-        return ['cursos' => Curso::all(),
-                'alunos' => Aluno::all(),
-                'instrutores' => Instrutor::all(),
-                'locais' => Local::all()];
-                
-        */
-        return view('index')->with('cursos', []);
-        //return view('index')->with('cursos', Curso::all());
+        $eventos = Curso::all();
+        return view('index', ['eventos' => $eventos]);
     }
 
     /**

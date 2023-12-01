@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Aluno;
+use App\Models\Evento;
 use PhpOption\None;
 
 class ParticipanteController extends Controller
@@ -36,8 +37,10 @@ class ParticipanteController extends Controller
     /**
      * Retorna a tela inicial do participante
      */
-    public function showTelaInicialAluno(){
-        return view('telaInicialAluno');
+    public function showTelaInicialAluno($idAluno){
+        $aluno = Aluno::find($idAluno);
+        $eventos = Evento::all();
+        return view('telaInicialAluno', ['aluno' => $aluno, 'eventos' => $eventos]);
     }
 
     /**
