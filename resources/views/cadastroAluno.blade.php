@@ -6,8 +6,8 @@ Cadastro Aluno
 
 @section('principal')
 
-<div class="col-md-6">
-  <h2 class="mb-4">Cadastro como Aluno</h2>
+<div class="mt-5 col-md-6">
+  <h2 class="mb-4 mt-4">Cadastro como Aluno</h2>
   <form action="criar" method="post">
     @csrf
     <div class="mb-3">

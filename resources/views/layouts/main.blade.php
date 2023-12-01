@@ -19,7 +19,7 @@
     <nav class="navbar bg-body-tertiary">
         <div class="container">
             <a class="navbar-brand" href="/">
-                <img src="img/celi.png" alt="Logo"
+                <img src="/img/celi.png" alt="Logo"
                      class="imageWidth d-inline-block align-text-top">
             </a>
             <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
