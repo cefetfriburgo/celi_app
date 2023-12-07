@@ -7,17 +7,20 @@ Aluno
 @section('principal')
 <main class="container mt-5 mb-5">
     <div class="container bg-body-tertiary rounded p-4">
-        <h1 class="text-center mb-4">Meus Cursos</h1>
+        <h1 class="text-center mb-4">Minhas Atividades</h1>
+       
+        
         <div class="row">
+            @foreach($eventos as $evento)
             <div class="card p-3 mb-3">
                 <div class="card-header d-flex justify-content-between">
-                    <h2>Curso de Bootstrap</h2>
-                    <p class="p-3 mb-2 bg-danger text-white rounded">Em andamento</p>
+                    <h2>{{$evento->tipo}} de {{$evento->nome}}</h2>
+                    <p class="p-3 mb-2 bg-success text-white rounded">Inscrito com sucesso!</p>
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">Instrutor(a): José</h5>
-                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam necessitatibus est explicabo, maxime vero sunt eveniet suscipit provident, excepturi eos non odit cumque magni ipsa, ex voluptatem molestiae obcaecati animi!</p>
-                    <p><b>Horário:</b> Segunda à Sexta. 13:00 horas.</p>
+                    <p class="card-text">{{$evento->descricao}}</p>
+                    <p><b>Carga Horária:</b> {{$evento->carga_horaria}} horas</p>
                     <div class="d-flex justify-content-between flex-wrap">
                         <a href="#" class="btn btn-primary mt-3">Declaração</a>
                         <a href="#" class="btn btn-primary mt-3">Frequencia</a>
@@ -25,7 +28,8 @@ Aluno
                     </div>
                 </div>
             </div>
-            <div class="card p-3">
+            @endforeach
+            {{-- <div class="card p-3">
                 <div class="card-header d-flex justify-content-between">
                     <h2>Curso de Ingles</h2>
                     <p class="p-3 mb-2 bg-success text-white rounded">Concluído</p>
@@ -40,7 +44,7 @@ Aluno
                         <a href="#" class="btn btn-primary mt-3">Certificado</a>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </main>

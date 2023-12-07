@@ -4,14 +4,14 @@
 Tela incial aluno
 @endsection
 
-
+@section('principal')
 <div class="container mt-5 mb-5">
     <div class="container bg-body-tertiary rounded p-4">
         <h1 class="text-center border-bottom pb-3">Bem-vindo {{ $aluno->nome }}</h1>
     </div>
     <div class="container mt-3 mb-3">
         <div class="d-grid">
-            <a href="#" class="btn btn-primary btn-block">Cursos inscritos</a>
+            <a href="/alunos/{{$aluno->id}}/cursos" class="btn btn-primary btn-block">Atividades inscritas</a>
         </div>
     </div>
     <div class="row">
@@ -28,5 +28,4 @@ Tela incial aluno
     </div>
 
 </div>
-</div>
-@section('principal')
+@endsection

@@ -6,7 +6,7 @@ Historico de aluno
 @section('principal')
 
 <div class="container d-flex justify-content-center">
-    <h1>Evento de {{-- $evento->titulo --}}</h1>
+    <h1>{{$evento->tipo}} de {{$evento->nome}}</h1>
 </div>
 <div class="container mt-2 d-flex justify-content-center">
     <table class="table table-bordered">

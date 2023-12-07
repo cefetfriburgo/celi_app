@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Aluno;
 use App\Models\Evento;
 use PhpOption\None;
+use Illuminate\Support\Facades\DB;
 
 class ParticipanteController extends Controller
 {
@@ -24,8 +25,12 @@ class ParticipanteController extends Controller
      */
 
     public function showCursos($aluno_id) {
-
-        return view('meusCursos');
+        $eventos = DB::table('eventos')
+        ->join('aluno_tem_eventos', 'eventos.id', '=', 'aluno_tem_eventos.evento_id')
+        ->where('aluno_tem_eventos.aluno_id', $aluno_id)
+        ->select('eventos.*')
+        ->get();
+        return view('meusCursos', ['eventos' => $eventos]);
     }
     /**
      * Retorna a tela do perfil do participante

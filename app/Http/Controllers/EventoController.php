@@ -7,9 +7,12 @@ use App\Models\Aluno;
 use App\Models\AlunoTemEvento;
 use Illuminate\Http\Request;
 use App\Models\Curso;
+use Illuminate\Database\Query\JoinClause;
+use Illuminate\Support\Facades\DB;
 
 class EventoController extends Controller
 {
+    private $id; //Atributo auxiliar para utilização da função showAlunosEmEventos
     /**
      * Exibe todos os eventos cadastrados da aplicação na tela de eventos.
      */
@@ -80,8 +83,23 @@ class EventoController extends Controller
     /**
      * Exibe todos os alunos inscritos em um determinado evento.
      */
-    public function showAlunosEmEventos(){//Corrigir lógica, pegar apenas os alunos inscritos naquele evento específico.
-        $alunos = Aluno::all();
-        return view('listaAlunosEvento', ['alunos' => $alunos]);
+    public function showAlunosEmEventos($eventoId){//Simplificar lógica
+        $this->setId($eventoId);
+        $alunos = DB::table('alunos')->join('aluno_tem_eventos', function (JoinClause $join){
+            $join->on('alunos.id', '=', 'aluno_tem_eventos.aluno_id')
+            ->where('aluno_tem_eventos.evento_id', '=', $this->getId());
+        })->select('alunos.*')->get();
+
+        $evento = Evento::find($eventoId);
+
+        return view('listaAlunosEvento', ['alunos' => $alunos, 'evento' => $evento]);
+    }
+
+    private function setId($id){//Função auxiliar
+        $this->id = $id;
+    }
+
+    private function getId(){//Função auxiliar
+        return $this->id;
     }
 }
