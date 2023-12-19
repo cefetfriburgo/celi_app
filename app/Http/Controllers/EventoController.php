@@ -21,15 +21,6 @@ class EventoController extends Controller
         return view('eventos', ['eventos' => $eventos]);
     }
 
-    public function get($curso_id){
-        // return "ola mundo";
-
-        $curso = Curso::find($curso_id);
-        return $curso->turmas();
-
-        //return view('curso')->with("curso", $curso);
-    }
-
     /**
      * Retorna a tela de cadastro de um novo evento
      */

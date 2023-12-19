@@ -6,7 +6,7 @@ Informações do Evento
 @section('principal')
 <div class="container bg-body-tertiary rounded p-4">
             <div class="mb-5">
-                <h1 class="text-center mb-4 pb-3 border-bottom">{{$evento->nome}}</h1>
+                <h1 class="text-center mb-4 pb-3 border-bottom">{{$evento->tipo}} de {{$evento->nome}}</h1>
                 <h2 class="text-center mb-4 pb-3 border-bottom">Descrição</h2>
                 <p>{{$evento->descricao}}</p>
                 <p>Carga horária: {{$evento->carga_horaria}}</p>

@@ -9,12 +9,14 @@ Contatos
         <div class="container bg-body-tertiary rounded p-4">
             <div>
                 <h1 class="text-center mb-4 pb-2 border-bottom">Contatos</h1>
+                <!-- Trocar o lorem ispum abaixo por uma descrição real -->
                 <p class="mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda error provident nemo dicta cupiditate veritatis vitae, odio, temporibus cum perferendis omnis, iste inventore expedita officiis ab obcaecati similique asperiores. Ex!</p>
                 
                 <h5 class="text-center mb-4 pb-2 border-bottom">Redes Sociais</h5>
                 <div class="d-flex justify-content-around mb-4">
-                    <a href="#" class=" text-decoration-none text-white"><i class="bi bi-instagram"></i> Instagram</a>
-                    <a href="#" class=" text-decoration-none text-white"><i class="bi bi-facebook"></i> Facebook</a>
+                    <a href="#" class=" text-decoration-none text-black"><i class="bi bi-instagram"></i> Instagram</a>
+                    <a href="#" class=" text-decoration-none text-black"><i class="bi bi-facebook"></i> Facebook</a>
+                    <!-- Adicionar links referentes ao instagram e ao facebook do projeto CELi -->
                 </div>
 
                 <h5 class="text-center mb-4 pb-2 border-bottom">Outros Contatos</h5>

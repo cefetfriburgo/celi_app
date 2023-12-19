@@ -18,7 +18,7 @@ Historico de aluno
         <tbody>
             @foreach($alunos as $aluno)
             <tr>
-                <td><a href="#" class="elemento_tem_item">{{ $aluno->nome }}</a></td>
+                <td><a href="/alunos/{{$aluno->id}}/perfil" class="elemento_tem_item">{{ $aluno->nome }}</a></td>
             </tr>
             @endforeach
         </tbody>

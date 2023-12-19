@@ -36,6 +36,7 @@ class ParticipanteController extends Controller
      * Retorna a tela do perfil do participante
      */
     public function showPerfil(){
+        //fazer lógica para pegar os dados do aluno do banco de dados
         return view('alunoPerfil');
     }
 
@@ -74,6 +75,7 @@ class ParticipanteController extends Controller
      * Retorna a tela de histórico do aluno
      */
     public function showTelaHistoricoAluno($aluno_id){
+        //Pegar dados relativos ao histórico do aluno no banco de dados
         return view('telaHistoricoAluno');
     }
 }

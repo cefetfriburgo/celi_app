@@ -7,7 +7,7 @@ Tela incial aluno
 @section('principal')
 <div class="container mt-5 mb-5">
     <div class="container bg-body-tertiary rounded p-4">
-        <h1 class="text-center border-bottom pb-3">Bem-vindo {{ $aluno->nome }}</h1>
+        <h1 class="text-center border-bottom pb-3">Bem-vindo {{ $aluno->nome }}</h1> <!-- Adicionar uma verificação do gênero do participante, atribuindo o pronome de tratamento adequado-->
     </div>
     <div class="container mt-3 mb-3">
         <div class="d-grid">
@@ -16,7 +16,7 @@ Tela incial aluno
     </div>
     <div class="row">
         <div class="card mb-3">
-            <h4 class="card-header mt-2">Sugestões para você:</h4>
+            <h4 class="card-header mt-2">Sugestões para você:</h4> <!-- Exibir apenas sugestões de atividades que o participante ainda não tenha feito ou não esteja cadastrado-->
             @foreach($eventos as $evento)
             <div class="card-body mt-3 mb-3 border">
                 <h5 class="card-title">{{$evento->tipo}} {{$evento->nome}}</h5>

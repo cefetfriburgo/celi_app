@@ -7,6 +7,7 @@ Como Participar
 @section('principal')
 <main class="container mt-5 mb-5">
         <div class="container bg-body-tertiary rounded p-4">
+            <!-- Adicionar uma descrição real aos campos abaixo -->
             <div>
                 <h1 class="text-center mb-4 pb-3 border-bottom">Como Participar</h1>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda error provident nemo dicta cupiditate veritatis vitae, odio, temporibus cum perferendis omnis, iste inventore expedita officiis ab obcaecati similique asperiores. Ex!</p>

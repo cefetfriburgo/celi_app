@@ -15,13 +15,14 @@ Aluno
             <div class="card p-3 mb-3">
                 <div class="card-header d-flex justify-content-between">
                     <h2>{{$evento->tipo}} de {{$evento->nome}}</h2>
-                    <p class="p-3 mb-2 bg-success text-white rounded">Inscrito com sucesso!</p>
+                    <p class="p-3 mb-2 bg-success text-white rounded">Inscrito com sucesso!</p> <!-- Pegar status de inscrição de maneira dinâmica -->
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">Instrutor(a): José</h5>
                     <p class="card-text">{{$evento->descricao}}</p>
                     <p><b>Carga Horária:</b> {{$evento->carga_horaria}} horas</p>
                     <div class="d-flex justify-content-between flex-wrap">
+                        <!-- Adicionar os links para exibição dos relatórios de declaração, frequência e emissão de certificado -->
                         <a href="#" class="btn btn-primary mt-3">Declaração</a>
                         <a href="#" class="btn btn-primary mt-3">Frequencia</a>
                         <a href="#" class="btn btn-primary mt-3">Certificado</a>
@@ -29,22 +30,6 @@ Aluno
                 </div>
             </div>
             @endforeach
-            {{-- <div class="card p-3">
-                <div class="card-header d-flex justify-content-between">
-                    <h2>Curso de Ingles</h2>
-                    <p class="p-3 mb-2 bg-success text-white rounded">Concluído</p>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Instrutor(a): Ana</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus sunt eius fuga harum magni, facere fugiat omnis quae mollitia at iure voluptas, distinctio, laborum deleniti possimus temporibus autem itaque! Neque.</p>
-                    <p><b>Horário:</b> Segunda à Sexta. 16:00 horas.</p>
-                    <div class="d-flex justify-content-between flex-wrap">
-                        <a href="#" class="btn btn-primary mt-3">Declaração</a>
-                        <a href="#" class="btn btn-primary mt-3">Frequencia</a>
-                        <a href="#" class="btn btn-primary mt-3">Certificado</a>
-                    </div>
-                </div>
-            </div> --}}
         </div>
     </div>
 </main>

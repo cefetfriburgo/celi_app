@@ -45,17 +45,15 @@ Route::get('/eventos', [EventoController::class, 'index']);
 Route::get('/eventos/cadastrar', [EventoController::class,'create']);
 Route::post('/eventos/criar', [EventoController::class,'store']);
 Route::get('/eventos/{evento_id}/informacao', [EventoController::class,'showInformacoes']);
-Route::get('/eventos/{evento_id}', [EventoController::class, 'get'])->name('cursoId');
 Route::post('/eventos/{evento_id}/inscrever', [EventoController::class, 'inscrever']);
 Route::get('/eventos/{evento_id}/alunos', [EventoController::class, 'showAlunosEmEventos']);
 
 //INSTRUTOR
-Route::get('/proponente/{intrutor_id}', [ProponenteController::class, 'show'])->name('show');
+Route::get('/proponente/{intrutor_id}', [ProponenteController::class, 'show'])->name('show'); //Não está funcionando
 Route::get('/proponente/{intrutor_id}/perfil', [ProponenteController::class, 'showPerfil'])->name('showPerfil');
-Route::get('/proponente/{intrutor_id}/cursosInstrutor', [ProponenteController::class, 'showCursos'])->name('showCursos');
+Route::get('/proponente/{intrutor_id}/cursosInstrutor', [ProponenteController::class, 'showCursos'])->name('showCursos'); //Não está funcionando
 //LOGIN & Cadastro
 Route::get('/login', [LoginController::class,'login'])->name('login');
-Route::get('/cadastro', [CadastroController::class,'create'])->name('create');
 Route::get('/cadastro/proponente', [CadastroController::class,'createProponente'])->name('createProponente');
 Route::get('/cadastro/administrador', [CadastroController::class,'createAdministrador'])->name('createAdministrador');
 

@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 use App\Models\Curso;
 
-class Instrutor extends Model
+class Instrutor extends Model //renomear classe para Proponente
 {
     use HasFactory;
 
-    protected $table = 'instrutor';
+    protected $table = 'proponentes';
 
     protected $fillable = [
                 'nome',

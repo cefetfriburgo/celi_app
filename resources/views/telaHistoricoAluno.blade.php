@@ -1,4 +1,4 @@
-@extends('layouts.alt')
+@extends('layouts.main')
 
 @section('titulo')
 Historico de aluno
@@ -6,7 +6,7 @@ Historico de aluno
 
 @section('principal')
 
-<div class="mt-3 d-flex justify-content-center">
+<div class="mt-3 d-flex justify-content-center"> <!-- Exibir dados de maneira dinâmica-->
   <h1 style="color: white;">Curso {{'$nome_curso'}}</h1>
 </div>
 <div class="d-flex justify-content-center">

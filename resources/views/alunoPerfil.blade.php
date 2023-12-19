@@ -8,12 +8,12 @@ Aluno
 <main class="container mt-5 mb-5">
     <div class="container bg-body-tertiary rounded p-4">
         <h1 class="text-center mb-4 pb-3 border-bottom">Perfil</h1>
-
+        <!-- Pegar os dados de maneira dinâmica-->
         <div class="container mt-5">
             <div class="row">
                 <div class="col d-inline-flex justify-content-center">
                     <picture>
-                        <img src="img/avatar.png" class="rounded-circle rotate" alt="avatarImagem"> <!-- Imagem do avatar não está sendo exibida na view -->
+                        <img src="/img/avatar.png" class="rounded-circle rotate" alt="foto de perfil">
                     </picture>
                 </div>
                 <div class="col">
