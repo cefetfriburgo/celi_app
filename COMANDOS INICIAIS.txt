@@ -1,0 +1,9 @@
+1°: composer require laravel/jetstream
+
+2°: php artisan jetstream:install livewire
+
+3°: Delete a migration create_session_table duplicada
+
+4°: php artisan migrate
+
+OBS: Não se esqueça de adicionar o arquivo .env com as configurações adequadas e criar a base de dados especificada.
