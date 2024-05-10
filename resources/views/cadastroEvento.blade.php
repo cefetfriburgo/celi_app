@@ -19,7 +19,7 @@ Cadastro
                 <input type="text" class="form-control" name="tipo" placeholder="tipo">
             </div>
             <div class="form-group mb-4">
-                <label for="descricao">Descrição da atividade</label>
+                <label for="descricao">Descrição da atividade: </label>
                 <textarea class="form-control" name="descricao" rows="3" placeholder="Faça uma descrição do evento e suas atividades, seu objetivo e detalhes."></textarea>
             </div>
             <div class="form-group mb-2">
