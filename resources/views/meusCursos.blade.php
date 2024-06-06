@@ -26,6 +26,7 @@ Aluno
                         <a href="#" class="btn btn-primary mt-3">Declaração</a>
                         <a href="#" class="btn btn-primary mt-3">Frequencia</a>
                         <a href="#" class="btn btn-primary mt-3">Certificado</a>
+                        <a href="#" class="btn btn-primary mt-3">Link Extra</a>
                     </div>
                 </div>
             </div>
