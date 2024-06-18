@@ -11,15 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('turmas', function (Blueprint $table) {
+        Schema::create('area_tematicas', function (Blueprint $table) {
             $table->id();
+            $table->string('nome');
             $table->timestamps();
-            $table->integer("num_vagas");
-            $table->date("data_inicio");
-            $table->date("data_fim");
-            $table->text("horario");
-            $table->unsignedBigInteger("curso_id");
-            $table->engine = 'InnoDB';
         });
     }
 
@@ -28,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('turmas');
+        Schema::dropIfExists('area_tematicas');
     }
 };

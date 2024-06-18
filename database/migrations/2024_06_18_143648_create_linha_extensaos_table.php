@@ -11,13 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('locals', function (Blueprint $table) {
+        Schema::create('linha_extensaos', function (Blueprint $table) {
             $table->id();
+            $table->string('nome');
             $table->timestamps();
-            $table->string("nome", 128)->nullable(false);
-            $table->string("tipo", 15);
-            $table->string("localizacao", 15);
-            $table->engine = 'InnoDB';
         });
     }
 
@@ -26,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('locals');
+        Schema::dropIfExists('linha_extensaos');
     }
 };
