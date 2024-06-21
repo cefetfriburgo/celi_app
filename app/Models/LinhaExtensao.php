@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class LinhaExtensao extends Model
 {
     use HasFactory;
+
+    protected $table = 'linha_extensaos';
+
+    protected $fillable = [
+        'nome',
+    ];
 }

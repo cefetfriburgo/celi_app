@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class AreaTematica extends Model
 {
     use HasFactory;
+
+    protected $table = 'area_tematicas';
+
+    protected $fillable = [
+        'nome',
+    ];
 }
