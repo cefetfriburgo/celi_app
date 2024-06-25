@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\LinhaExtensaoController;
 use App\Http\Controllers\MetodologiaController;
 use App\Http\Controllers\PublicoAlvoController;
+use App\Http\Controllers\BairroController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -42,3 +43,10 @@ Route::post('publico_alvo', [PublicoAlvoController::class, 'store']);
 Route::get('publico_alvo/{id}', [PublicoAlvoController::class, 'show']);
 Route::put('publico_alvo/{id}', [PublicoAlvoController::class, 'update']);
 Route::delete('publico_alvo/{id}', [PublicoAlvoController::class, 'destroy']);
+
+//Bairro
+Route::get('bairro', [BairroController::class, 'index']);
+Route::post('bairro', [BairroController::class, 'store']);
+Route::get('bairro/{id}', [BairroController::class, 'show']);
+Route::put('bairro/{id}', [BairroController::class, 'update']);
+Route::delete('bairro/{id}', [BairroController::class, 'destroy']);
