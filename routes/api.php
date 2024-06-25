@@ -4,6 +4,7 @@ use App\Http\Controllers\AreaTematicaController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\LinhaExtensaoController;
 use App\Http\Controllers\MetodologiaController;
+use App\Http\Controllers\PublicoAlvoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -34,3 +35,10 @@ Route::post('metodologia', [MetodologiaController::class, 'store']);
 Route::get('metodologia/{id}', [MetodologiaController::class, 'show']);
 Route::put('metodologia/{id}', [MetodologiaController::class, 'update']);
 Route::delete('metodologia/{id}', [MetodologiaController::class, 'destroy']);
+
+//Publico Alvo
+Route::get('publico_alvo', [PublicoAlvoController::class, 'index']);
+Route::post('publico_alvo', [PublicoAlvoController::class, 'store']);
+Route::get('publico_alvo/{id}', [PublicoAlvoController::class, 'show']);
+Route::put('publico_alvo/{id}', [PublicoAlvoController::class, 'update']);
+Route::delete('publico_alvo/{id}', [PublicoAlvoController::class, 'destroy']);
