@@ -6,6 +6,7 @@ use App\Http\Controllers\LinhaExtensaoController;
 use App\Http\Controllers\MetodologiaController;
 use App\Http\Controllers\PublicoAlvoController;
 use App\Http\Controllers\BairroController;
+use App\Http\Controllers\EnderecoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -50,3 +51,10 @@ Route::post('bairro', [BairroController::class, 'store']);
 Route::get('bairro/{id}', [BairroController::class, 'show']);
 Route::put('bairro/{id}', [BairroController::class, 'update']);
 Route::delete('bairro/{id}', [BairroController::class, 'destroy']);
+
+//Endereço
+Route::get('endereco', [EnderecoController::class, 'index']);
+Route::post('endereco', [EnderecoController::class, 'store']);
+Route::get('endereco/{id}', [EnderecoController::class, 'show']);
+Route::put('endereco/{id}', [EnderecoController::class, 'update']);
+Route::delete('endereco/{id}', [EnderecoController::class, 'destroy']);
