@@ -1,19 +1,11 @@
 <?php
 
+use App\Http\Controllers\AreaTematicaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('area_tematica', [AreaTematicaController::class, 'index']);
+Route::post('area_tematica', [AreaTematicaController::class, 'store']);
+Route::get('area_tematica/{id}', [AreaTematicaController::class, 'show']);
+Route::put('area_tematica/{id}', [AreaTematicaController::class, 'update']);
+Route::delete('area_tematica/{id}', [AreaTematicaController::class, 'destroy']);
