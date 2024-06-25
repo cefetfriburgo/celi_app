@@ -3,6 +3,7 @@
 use App\Http\Controllers\AreaTematicaController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\LinhaExtensaoController;
+use App\Http\Controllers\MetodologiaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -26,3 +27,10 @@ Route::post('linha_extensao', [LinhaExtensaoController::class, 'store']);
 Route::get('linha_extensao/{id}', [LinhaExtensaoController::class, 'show']);
 Route::put('linha_extensao/{id}', [LinhaExtensaoController::class, 'update']);
 Route::delete('linha_extensao/{id}', [LinhaExtensaoController::class, 'destroy']);
+
+//Metodologia
+Route::get('metodologia', [MetodologiaController::class, 'index']);
+Route::post('metodologia', [MetodologiaController::class, 'store']);
+Route::get('metodologia/{id}', [MetodologiaController::class, 'show']);
+Route::put('metodologia/{id}', [MetodologiaController::class, 'update']);
+Route::delete('metodologia/{id}', [MetodologiaController::class, 'destroy']);
