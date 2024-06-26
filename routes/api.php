@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\AreaTematicaController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\LinhaExtensaoController;
@@ -10,6 +10,13 @@ use App\Http\Controllers\EnderecoController;
 use App\Http\Controllers\AtividadeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
+//UserController
+Route::get('user', [UserController::class, 'index']);
+Route::post('user', [UserController::class, 'store']);
+Route::get('user/{id}', [UserController::class, 'show']);
+Route::put('user/{id}', [UserController::class, 'update']);
+Route::delete('user/{id}', [UserController::class, 'destroy']);
 
 //AreaTematica
 Route::get('area_tematica', [AreaTematicaController::class, 'index']);
