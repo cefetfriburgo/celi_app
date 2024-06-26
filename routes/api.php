@@ -7,6 +7,7 @@ use App\Http\Controllers\MetodologiaController;
 use App\Http\Controllers\PublicoAlvoController;
 use App\Http\Controllers\BairroController;
 use App\Http\Controllers\EnderecoController;
+use App\Http\Controllers\AtividadeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -58,3 +59,10 @@ Route::post('endereco', [EnderecoController::class, 'store']);
 Route::get('endereco/{id}', [EnderecoController::class, 'show']);
 Route::put('endereco/{id}', [EnderecoController::class, 'update']);
 Route::delete('endereco/{id}', [EnderecoController::class, 'destroy']);
+
+//AtividadeController
+Route::get('atividade', [AtividadeController::class, 'index']);
+Route::post('atividade', [AtividadeController::class, 'store']);
+Route::get('atividade/{id}', [AtividadeController::class, 'show']);
+Route::put('atividade/{id}', [AtividadeController::class, 'update']);
+Route::delete('atividade/{id}', [AtividadeController::class, 'destroy']);
