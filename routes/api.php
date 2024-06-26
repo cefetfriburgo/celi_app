@@ -11,6 +11,7 @@ use App\Http\Controllers\AtividadeController;
 use App\Http\Controllers\DiarioController;
 use App\Http\Controllers\InfraestruturaController;
 use App\Http\Controllers\MaterialFisicoController;
+use App\Http\Controllers\MaterialOnlineController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -98,3 +99,10 @@ Route::post('material_fisico', [MaterialFisicoController::class, 'store']);
 Route::get('material_fisico/{id}', [MaterialFisicoController::class, 'show']);
 Route::put('material_fisico/{id}', [MaterialFisicoController::class, 'update']);
 Route::delete('material_fisico/{id}', [MaterialFisicoController::class, 'destroy']);
+
+//Material Online
+Route::get('material_online', [MaterialOnlineController::class, 'index']);
+Route::post('material_online', [MaterialOnlineController::class, 'store']);
+Route::get('material_online/{id}', [MaterialOnlineController::class, 'show']);
+Route::put('material_online/{id}', [MaterialOnlineController::class, 'update']);
+Route::delete('material_online/{id}', [MaterialOnlineController::class, 'destroy']);
