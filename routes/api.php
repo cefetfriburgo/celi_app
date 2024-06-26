@@ -10,6 +10,7 @@ use App\Http\Controllers\EnderecoController;
 use App\Http\Controllers\AtividadeController;
 use App\Http\Controllers\DiarioController;
 use App\Http\Controllers\InfraestruturaController;
+use App\Http\Controllers\MaterialFisicoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -84,9 +85,16 @@ Route::get('diario/{id}', [DiarioController::class, 'show']);
 Route::put('diario/{id}', [DiarioController::class, 'update']);
 Route::delete('diario/{id}', [DiarioController::class, 'destroy']);
 
-//InfraestruturaController
+//Infraestrutura
 Route::get('infraestrutura', [InfraestruturaController::class, 'index']);
 Route::post('infraestrutura', [InfraestruturaController::class, 'store']);
 Route::get('infraestrutura/{id}', [InfraestruturaController::class, 'show']);
 Route::put('infraestrutura/{id}', [InfraestruturaController::class, 'update']);
 Route::delete('infraestrutura/{id}', [InfraestruturaController::class, 'destroy']);
+
+//Material Fisico
+Route::get('material_fisico', [MaterialFisicoController::class, 'index']);
+Route::post('material_fisico', [MaterialFisicoController::class, 'store']);
+Route::get('material_fisico/{id}', [MaterialFisicoController::class, 'show']);
+Route::put('material_fisico/{id}', [MaterialFisicoController::class, 'update']);
+Route::delete('material_fisico/{id}', [MaterialFisicoController::class, 'destroy']);
