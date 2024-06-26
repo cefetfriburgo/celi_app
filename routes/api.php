@@ -9,6 +9,7 @@ use App\Http\Controllers\BairroController;
 use App\Http\Controllers\EnderecoController;
 use App\Http\Controllers\AtividadeController;
 use App\Http\Controllers\DiarioController;
+use App\Http\Controllers\InfraestruturaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -76,9 +77,16 @@ Route::put('atividade/{id}', [AtividadeController::class, 'update']);
 Route::delete('atividade/{id}', [AtividadeController::class, 'destroy']);
 
 
-//DiarioController
+//Diario
 Route::get('diario', [DiarioController::class, 'index']);
 Route::post('diario', [DiarioController::class, 'store']);
 Route::get('diario/{id}', [DiarioController::class, 'show']);
 Route::put('diario/{id}', [DiarioController::class, 'update']);
 Route::delete('diario/{id}', [DiarioController::class, 'destroy']);
+
+//InfraestruturaController
+Route::get('infraestrutura', [InfraestruturaController::class, 'index']);
+Route::post('infraestrutura', [InfraestruturaController::class, 'store']);
+Route::get('infraestrutura/{id}', [InfraestruturaController::class, 'show']);
+Route::put('infraestrutura/{id}', [InfraestruturaController::class, 'update']);
+Route::delete('infraestrutura/{id}', [InfraestruturaController::class, 'destroy']);
