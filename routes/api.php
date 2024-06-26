@@ -8,10 +8,11 @@ use App\Http\Controllers\PublicoAlvoController;
 use App\Http\Controllers\BairroController;
 use App\Http\Controllers\EnderecoController;
 use App\Http\Controllers\AtividadeController;
+use App\Http\Controllers\DiarioController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-//UserController
+//User
 Route::get('user', [UserController::class, 'index']);
 Route::post('user', [UserController::class, 'store']);
 Route::get('user/{id}', [UserController::class, 'show']);
@@ -67,9 +68,17 @@ Route::get('endereco/{id}', [EnderecoController::class, 'show']);
 Route::put('endereco/{id}', [EnderecoController::class, 'update']);
 Route::delete('endereco/{id}', [EnderecoController::class, 'destroy']);
 
-//AtividadeController
+//Atividade
 Route::get('atividade', [AtividadeController::class, 'index']);
 Route::post('atividade', [AtividadeController::class, 'store']);
 Route::get('atividade/{id}', [AtividadeController::class, 'show']);
 Route::put('atividade/{id}', [AtividadeController::class, 'update']);
 Route::delete('atividade/{id}', [AtividadeController::class, 'destroy']);
+
+
+//DiarioController
+Route::get('diario', [DiarioController::class, 'index']);
+Route::post('diario', [DiarioController::class, 'store']);
+Route::get('diario/{id}', [DiarioController::class, 'show']);
+Route::put('diario/{id}', [DiarioController::class, 'update']);
+Route::delete('diario/{id}', [DiarioController::class, 'destroy']);
