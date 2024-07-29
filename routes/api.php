@@ -108,6 +108,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('material_online/{id}', [MaterialOnlineController::class, 'show']);
     Route::put('material_online/{id}', [MaterialOnlineController::class, 'update']);
     Route::delete('material_online/{id}', [MaterialOnlineController::class, 'destroy']);
+    Route::post('logout', [AuthenticatedSessionController::class, 'destroy']);
 });
 Route::post('login', [AuthenticatedSessionController::class, 'store']);
-Route::post('logout', [AuthenticatedSessionController::class, 'destroy']);
+// Route::post('logout', [AuthenticatedSessionController::class, 'destroy']);
