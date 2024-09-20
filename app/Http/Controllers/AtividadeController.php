@@ -23,6 +23,8 @@ class AtividadeController extends Controller
             'objetivo' => 'nullable|string',
             'foco_inclusao' => 'nullable|string',
             'limite_participantes' => 'nullable|integer',
+            'data_inicio' => 'required|date',
+            'data_termino' => 'required|date',
             'metodologia_id' => 'nullable|exists:metodologias,id',
             'publico_alvo_id' => 'nullable|exists:publico_alvos,id',
             'endereco_id' => 'nullable|exists:enderecos,id',

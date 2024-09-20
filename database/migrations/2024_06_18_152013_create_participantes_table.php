@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('participantes', function (Blueprint $table) {
             $table->id();
             $table->foreignId('usuario_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreignId('diario_id')->references('id')->on('diarios')->onDelete('cascade');
+            $table->foreignId('atividade_id')->references('id')->on('atividades')->onDelete('cascade');
             $table->timestamps();
         });
     }

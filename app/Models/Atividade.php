@@ -19,6 +19,8 @@ class Atividade extends Model
         'objetivo',
         'foco_inclusao',
         'limite_participantes',
+        'data_inicio',
+        'data_termino',
         'metodologia_id',
         'publico_alvo_id',
         'endereco_id',

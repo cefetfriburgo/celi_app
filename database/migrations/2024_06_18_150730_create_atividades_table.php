@@ -14,18 +14,20 @@ return new class extends Migration
         Schema::create('atividades', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
-            $table->foreignId('realizador_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreignId('realizador_id')->nullable()->references('id')->on('users')->onDelete('cascade');
             $table->text('descricao');
-            $table->enum('status', ['Em avaliação', 'Aprovado', 'Recusado', 'Andamento', 'Concluído']);
-            $table->text('objetivo');
-            $table->boolean('foco_inclusao');
+            $table->enum('status', ['Em avaliação', 'Aprovado', 'Recusado', 'Andamento', 'Concluído'])->nullable();
+            $table->text('objetivo')->nullable();
+            $table->boolean('foco_inclusao')->nullable();
             $table->integer('limite_participantes')->nullable();
-            $table->foreignId('metodologia_id')->references('id')->on('metodologias')->onDelete('cascade');
-            $table->foreignId('publico_alvo_id')->references('id')->on('publico_alvos')->onDelete('cascade');
-            $table->foreignId('endereco_id')->references('id')->on('enderecos')->onDelete('cascade');
-            $table->foreignId('categoria_id')->references('id')->on('categorias')->onDelete('cascade');
-            $table->foreignId('area_tematica_id')->references('id')->on('area_tematicas')->onDelete('cascade');
-            $table->foreignId('linha_extensao_id')->references('id')->on('linha_extensaos')->onDelete('cascade');
+            $table->date('data_inicio');
+            $table->date('data_termino');
+            $table->foreignId('metodologia_id')->nullable()->references('id')->on('metodologias')->onDelete('cascade');
+            $table->foreignId('publico_alvo_id')->nullable()->references('id')->on('publico_alvos')->onDelete('cascade');
+            $table->foreignId('endereco_id')->nullable()->references('id')->on('enderecos')->onDelete('cascade');
+            $table->foreignId('categoria_id')->nullable()->references('id')->on('categorias')->onDelete('cascade');
+            $table->foreignId('area_tematica_id')->nullable()->references('id')->on('area_tematicas')->onDelete('cascade');
+            $table->foreignId('linha_extensao_id')->nullable()->references('id')->on('linha_extensaos')->onDelete('cascade');
             $table->timestamps();
         });
     }
