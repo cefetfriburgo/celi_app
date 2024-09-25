@@ -22,7 +22,10 @@ class AuthenticatedSessionController extends Controller
             $user = Auth::user();
             $token = $user->createToken('token-name')->plainTextToken;
 
-            return response()->json(['token' => $token], 200);
+            return response()->json([
+                'token' => $token,
+                'user_id' => $user->id
+            ], 200);
         }
 
         throw ValidationException::withMessages([
