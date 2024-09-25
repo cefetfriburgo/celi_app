@@ -12,6 +12,7 @@ use App\Http\Controllers\DiarioController;
 use App\Http\Controllers\InfraestruturaController;
 use App\Http\Controllers\MaterialFisicoController;
 use App\Http\Controllers\MaterialOnlineController;
+use App\Http\Controllers\ParticipanteController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -26,7 +27,11 @@ Route::get('atividade/{id}', [AtividadeController::class, 'show']);
 
 Route::put('atividade/{id}/status', [AtividadeController::class, 'atualizarStatus']);
 
-Route::middleware('auth:sanctum')->group(function () {
+Route::get('participante', [ParticipanteController::class, 'index']);
+Route::post('participante', [ParticipanteController::class, 'store']);
+
+
+// Route::middleware('auth:sanctum')->group(function () {
     //User
     Route::get('user', [UserController::class, 'index']);
     Route::get('user/{id}', [UserController::class, 'show']);
@@ -114,4 +119,4 @@ Route::middleware('auth:sanctum')->group(function () {
     // Route::put('material_online/{id}', [MaterialOnlineController::class, 'update']);
     // Route::delete('material_online/{id}', [MaterialOnlineController::class, 'destroy']);
     // Route::post('logout', [AuthenticatedSessionController::class, 'destroy']);
-});
+// });
