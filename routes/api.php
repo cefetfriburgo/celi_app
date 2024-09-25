@@ -23,6 +23,9 @@ Route::post('login', [AuthenticatedSessionController::class, 'store']);
 Route::get('atividade', [AtividadeController::class, 'index']);
 Route::get('atividade/{id}', [AtividadeController::class, 'show']);
 
+
+Route::put('atividade/{id}/status', [AtividadeController::class, 'atualizarStatus']);
+
 Route::middleware('auth:sanctum')->group(function () {
     //User
     Route::get('user', [UserController::class, 'index']);
@@ -32,6 +35,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
     //Atividade
     Route::post('atividade', [AtividadeController::class, 'store']);
+    
     Route::put('atividade/{id}', [AtividadeController::class, 'update']);
     Route::delete('atividade/{id}', [AtividadeController::class, 'destroy']);
 

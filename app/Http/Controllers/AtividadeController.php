@@ -38,6 +38,20 @@ class AtividadeController extends Controller
         return response()->json($atividade, 201);
     }
 
+    public function atualizarStatus($id)
+    {
+        $atividade = Atividade::find($id);
+
+        if (!$atividade) {
+            return response()->json(['message' => 'Atividade não encontrada'], 404);
+        }
+
+        $atividade->status = 'Andamento';
+        $atividade->save();
+
+        return response()->json(['message' => 'Status atualizado com sucesso', 'atividade' => $atividade]);
+    }
+
     public function show($id)
     {
         $atividade = Atividade::findOrFail($id);
