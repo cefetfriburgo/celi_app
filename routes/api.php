@@ -21,6 +21,7 @@ Route::post('user', [UserController::class, 'store']);
 
 Route::post('login', [AuthenticatedSessionController::class, 'store']);
 
+Route::get('atividade_andamento', [AtividadeController::class, 'indexEmAndamento']);
 Route::get('atividade', [AtividadeController::class, 'index']);
 Route::get('atividade/{id}', [AtividadeController::class, 'show']);
 
@@ -29,6 +30,7 @@ Route::put('atividade/{id}/status', [AtividadeController::class, 'atualizarStatu
 
 Route::get('participante', [ParticipanteController::class, 'index']);
 Route::post('participante', [ParticipanteController::class, 'store']);
+Route::get('participantes/{atividadeId}', [ParticipanteController::class, 'getParticipantesPorAtividade']);
 
 
 // Route::middleware('auth:sanctum')->group(function () {

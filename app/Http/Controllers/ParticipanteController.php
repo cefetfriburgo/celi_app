@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Participante; // Adicionado
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ParticipanteController extends Controller
@@ -33,5 +34,17 @@ class ParticipanteController extends Controller
     
         $participante = Participante::create($request->only(['usuario_id', 'atividade_id'])); // Modificado
         return response()->json($participante, 201);
-    }    
+    }
+    
+    public function getParticipantesPorAtividade($atividadeId)
+    {
+        // Obter os IDs dos participantes da atividade
+        $participantes = Participante::where('atividade_id', $atividadeId)->pluck('usuario_id');
+
+        // Obter os usuários correspondentes aos IDs dos participantes
+        $usuarios = User::whereIn('id', $participantes)->get();
+
+        // Retornar os usuários em formato JSON
+        return response()->json($usuarios);
+    }
 }
