@@ -19,6 +19,13 @@ class AtividadeController extends Controller
         return response()->json($atividadesEmAndamento);
     }
 
+    public function showEmAndamento($id)
+    {
+        $atividadesEmAndamento = Atividade::where('status', 'Andamento')->get();
+        $atividade = $atividadesEmAndamento->firstWhere('id', $id);
+        return response()->json($atividade);
+    }
+
     public function store(Request $request)
     {
         $request->validate([
