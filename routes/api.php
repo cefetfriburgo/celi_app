@@ -23,18 +23,16 @@ Route::post('login', [AuthenticatedSessionController::class, 'store']);
 
 Route::get('atividade_andamento', [AtividadeController::class, 'indexEmAndamento']);
 Route::get('atividade_andamento/{id}', [AtividadeController::class, 'showEmAndamento']);
+
 Route::get('atividade', [AtividadeController::class, 'index']);
 Route::get('atividade/{id}', [AtividadeController::class, 'show']);
 
+Route::middleware('auth:sanctum')->group(function () {
+    //Logout
+    Route::post('logout', [AuthenticatedSessionController::class, 'destroy']);
+});
 
-Route::put('atividade/{id}/status', [AtividadeController::class, 'atualizarStatus']);
-
-Route::get('participante', [ParticipanteController::class, 'index']);
-Route::post('participante', [ParticipanteController::class, 'store']);
-Route::get('participantes/{atividadeId}', [ParticipanteController::class, 'getParticipantesPorAtividade']);
-
-
-// Route::middleware('auth:sanctum')->group(function () {
+Route::middleware(['auth:sanctum', 'admin'])->group(function () {
     //User
     Route::get('user', [UserController::class, 'index']);
     Route::get('user/{id}', [UserController::class, 'show']);
@@ -43,13 +41,18 @@ Route::get('participantes/{atividadeId}', [ParticipanteController::class, 'getPa
 
     //Atividade
     Route::post('atividade', [AtividadeController::class, 'store']);
-    
     Route::put('atividade/{id}', [AtividadeController::class, 'update']);
     Route::delete('atividade/{id}', [AtividadeController::class, 'destroy']);
+    Route::put('atividade/{id}/status', [AtividadeController::class, 'atualizarStatus']); //Publicar Atividade
 
-    //Logout
-    Route::post('logout', [AuthenticatedSessionController::class, 'destroy']);
+    //Participante
+    Route::get('participante', [ParticipanteController::class, 'index']);
+    Route::get('participantes/{atividadeId}', [ParticipanteController::class, 'getParticipantesPorAtividade']);
+    Route::post('participante', [ParticipanteController::class, 'store']);
+});
 
+
+    //Adicionar nas próximas versões
     //AreaTematica
     // Route::get('area_tematica', [AreaTematicaController::class, 'index']);
     // Route::post('area_tematica', [AreaTematicaController::class, 'store']);
@@ -122,4 +125,3 @@ Route::get('participantes/{atividadeId}', [ParticipanteController::class, 'getPa
     // Route::put('material_online/{id}', [MaterialOnlineController::class, 'update']);
     // Route::delete('material_online/{id}', [MaterialOnlineController::class, 'destroy']);
     // Route::post('logout', [AuthenticatedSessionController::class, 'destroy']);
-// });
