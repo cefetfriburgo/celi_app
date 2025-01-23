@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('user', [UserController::class, 'store']);
 
-Route::post('login', [AuthenticatedSessionController::class, 'store']);
+Route::post('teste_login', [AuthenticatedSessionController::class, 'store']);
 
 Route::get('/atividade_andamento', [AtividadeController::class, 'indexEmAndamento']);
 Route::get('/atividade_andamento/{id}', [AtividadeController::class, 'showEmAndamento']);
