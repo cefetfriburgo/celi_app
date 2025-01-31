@@ -27,6 +27,9 @@ Route::get('/atividade_andamento/{id}', [AtividadeController::class, 'showEmAnda
 Route::middleware('auth:sanctum')->group(function () {
     //Logout
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy']);
+
+    //Participante
+    Route::post('participante', [ParticipanteController::class, 'store']);
 });
 
 Route::middleware(['auth:sanctum', 'admin'])->group(function () {
@@ -47,7 +50,6 @@ Route::middleware(['auth:sanctum', 'admin'])->group(function () {
     //Participante
     Route::get('participante', [ParticipanteController::class, 'index']);
     Route::get('participantes/{atividadeId}', [ParticipanteController::class, 'getParticipantesPorAtividade']);
-    Route::post('participante', [ParticipanteController::class, 'store']);
 });
 
 
