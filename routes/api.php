@@ -24,9 +24,6 @@ Route::post('teste_login', [AuthenticatedSessionController::class, 'store']);
 Route::get('/atividade_andamento', [AtividadeController::class, 'indexEmAndamento']);
 Route::get('/atividade_andamento/{id}', [AtividadeController::class, 'showEmAndamento']);
 
-Route::get('atividade', [AtividadeController::class, 'index']);
-Route::get('atividade/{id}', [AtividadeController::class, 'show']);
-
 Route::middleware('auth:sanctum')->group(function () {
     //Logout
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy']);
@@ -40,6 +37,8 @@ Route::middleware(['auth:sanctum', 'admin'])->group(function () {
     Route::delete('user/{id}', [UserController::class, 'destroy']);
 
     //Atividade
+    Route::get('atividade', [AtividadeController::class, 'index']);
+    Route::get('atividade/{id}', [AtividadeController::class, 'show']);
     Route::post('atividade', [AtividadeController::class, 'store']);
     Route::put('atividade/{id}', [AtividadeController::class, 'update']);
     Route::delete('atividade/{id}', [AtividadeController::class, 'destroy']);
