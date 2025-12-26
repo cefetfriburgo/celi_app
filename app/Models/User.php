@@ -18,37 +18,43 @@ class User extends Authenticatable
     use Notifiable;
     use TwoFactorAuthenticatable;
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
     protected $fillable = [
         'name',
         'email',
         'password',
-        'adm',
     ];
 
-    protected static function boot()
-    {
-        parent::boot();
-
-        static::updating(function ($user) {
-            if ($user->isDirty('adm') && $user->getOriginal('adm') === 0) {
-                $user->adm = 0;
-            }
-        });
-    }
-
+    /**
+     * The attributes that should be hidden for serialization.
+     *
+     * @var array<int, string>
+     */
     protected $hidden = [
         'password',
         'remember_token',
         'two_factor_recovery_codes',
         'two_factor_secret',
-        'role'
     ];
 
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
+     */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'role' => 'string',
     ];
 
+    /**
+     * The accessors to append to the model's array form.
+     *
+     * @var array<int, string>
+     */
     protected $appends = [
         'profile_photo_url',
     ];

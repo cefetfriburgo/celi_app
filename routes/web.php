@@ -22,6 +22,10 @@ use Laravel\Jetstream\Rules\Role;
 |
 */
 //INDEX & VARIADAS
+Route::get('/', function(){
+	return redirect('/eventos-testes/atividades/index.html');
+});
+/*
 Route::get('/', [IndexController::class, 'showHome'])->name('showHome');
 Route::get('/contatos', [IndexController::class,'showContatos']);
 Route::get('/comoParticipar', [IndexController::class,'showComoParticipar'])->name('showComoParticipar');
@@ -108,7 +112,6 @@ Route::delete();
  *              public function delete(id){ ... }
  *
  */
-
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

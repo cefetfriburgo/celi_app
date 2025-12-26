@@ -29,6 +29,11 @@ class Atividade extends Model
         'linha_extensao_id',
     ];
 
+	protected $casts = [
+        'data_inicio' => 'datetime',
+        'data_termino' => 'datetime',
+    ];
+
     // Relacionamentos
 
     public function realizador()
