@@ -65,4 +65,4 @@ Please include the following details if possible:
 
 ---
 
-**Thank you for helping to keep WeGIA secure.**
+**Thank you for helping to keep CELi app secure.**
